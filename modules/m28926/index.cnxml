@@ -1,0 +1,29 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Project</title>
+  <metadata>
+  <md:content-id>m28926</md:content-id><md:title>Project</md:title>
+  <md:abstract>There are some suggested projects for the Software Engineering course.</md:abstract>
+  <md:uuid>850555f6-476c-4672-8ce8-12bf39df2856</md:uuid>
+</metadata>
+
+<content>
+    <para id="id3470302">Software Engineering Project aims to provide students with the experience of developing a medium-scale computing project in a small team. All aspects of the development process are considered: problem specification, requirement extraction, system design, implementation, integration, testing and documentation. This course provides students with the experience of working in a team and dealing with the associated problems of communication and team management.</para>
+    <para id="id3470314">A client can be any person or organization except yourself (e.g., a member of faculty or staff, a department of university, a local company or other external organization, a student body, etc.). Some potential projects and clients will be suggested but you are encouraged to identify your own. There should be a firm intention by the client to use the software in production. </para>
+    <para id="id3470327">In selecting a project, think broadly. Your project can be an application, system software, or even a toolkit. Software engineering covers everything from Palm Pilots to supercomputers. The only conditions are that there must be a real client and real users.</para>
+    <para id="id3470336">Here are some suggested projects.  They will be discussed during class.  Additional project suggestions may be posted here during the first week of class.</para>
+    <section id="id-0457386578445">
+      <title>Development a web portal </title>
+      <para id="id3470352">We reuse a available web portal such as DotnetNuke, IBM Web Sphere, Liferay, PHP-Nuke… to develop a new application. We would like to transform it into a database-driven site and would like for your students to build the architecture, including a database and web interface. </para>
+      <para id="id3470365">For example, a web portal for management a library, our hope is to have searching capabilities, including the option to search the entire site or selected areas of the site. Once the initial architecture is built, our library staff would like to be able to add records and keywords into the database from a web-based form. It would be important for our staff to maintain the system with very little programming knowledge on our part. Our preference for software would be MySQL/php, but we are very flexible on that part.</para>
+    </section>
+    <section id="id-296522571742">
+      <title>Interactive Helpdesk and Inventory System</title>
+      <para id="id3470385">The aim of this project is to build a Helpdesk and Inventory system for a university selected (example, for the university of Danang). The system has been designed to allow the ICT Staff to administrate problems in their computer systems easily and efficently, by providing an easy to use Helpdesk program. It also has an integrated inventory system for both Hardware and Software, and the Hardware system automatically updates itself with the latest information on all the computers that the university has.</para>
+    </section>
+    <section id="id-592419083917">
+      <title>An IDE for Microcontrollers in Linux </title>
+      <para id="id3470405">The puropse of this project is to provide an easy to use Integrated Developmment Environment for the Atmel series of AVR microcontrollers in Linux. Currently there are few options available if using Linux whilst developing for an AVR microcontroller, with most software being Windows only. Thus the client for this project, who wishes to use Linux for development, has the need for such software.</para>
+      <para id="id3470420">The main goal of the project is to streamline the tasks of compiling, debugging, emulating and transferring AVR programs. This will be accomplished by developing a plugin for the free open source text editor jEdit, which will integrate all the tools required into one easy to use package.</para>
+    </section>
+  </content>
+</document>

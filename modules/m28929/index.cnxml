@@ -1,0 +1,200 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Software construction</title>
+  <metadata>
+  <md:content-id>m28929</md:content-id><md:title>Software construction</md:title>
+  <md:abstract>This module introduces concepts and problems on software construction. It refers to the detailed creation of working, meaningful software through a combination of coding, verification, unit testing, integration testing, and debugging.</md:abstract>
+  <md:uuid>a74f6118-7e78-448d-a521-899d0b2425c5</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-596504325691">
+      <title>Introduction</title>
+      <para id="id14896911">The term software construction refers to the detailed creation of working, meaningful software through a combination of coding, verification, unit testing, integration testing, and debugging.</para>
+      <para id="id19440444">The software construction is linked to all the other software engineering, most strongly to software design and software testing. This is because the software construction process itself involves significant software design and test activity. It also uses the output of design and provides one of the inputs to testing, both design and testing being the activities. Detailed boundaries between design, construction, and testing (if any) will vary depending upon the software life cycle processes that are used in a project.</para>
+      <figure id="id19671159"><media id="id1170015671967" alt=""><image src="../../media/graphics1-e838.jpg" mime-type="image/jpeg" height="457" width="583"/></media>
+<caption>Software construction activities</caption></figure>
+      <para id="id18694297">Although some detailed design may be performed prior to construction, much design work is performed within the construction activity itself. Thus the software construction is closely linked to the software design.</para>
+      <para id="id12065299">Throughout construction, software engineers both unit-test and integration-test their work. Thus, the software construction is closely linked to the software testing as well.</para>
+      <para id="id16076754">Software construction typically produces the highest volume of configuration items that need to be managed in a software project (source files, content, test cases, and so on). Thus, the software construction is also closely linked to the software configuration management.</para>
+    </section>
+    <section id="id-685920536174">
+      <title>Software Construction Fundamentals</title>
+      <para id="id15541496">The fundamentals of software construction include:</para>
+      <list id="id12828600" list-type="bulleted">
+        <item>Minimizing complexity </item>
+        <item>Anticipating change </item>
+        <item>Constructing for verification </item>
+        <item>Standards in construction </item>
+      </list>
+      <para id="id18907815">The first three concepts apply to design as well as to construction. The following sections define these concepts and describe how they apply to construction.</para>
+      <section id="id-0945908335006">
+        <title>Minimizing Complexity</title>
+        <para id="id16477432">A major factor in how people convey intent to computers is the severely limited ability of people to hold complex structures and information in their working memories, especially over long periods of time. This leads to one of the strongest drivers in software construction: minimizing complexity. The need to reduce complexity applies to essentially every aspect of software construction, and is particularly critical to the process of verification and testing of software constructions.</para>
+        <para id="id19646803">In software construction, reduced complexity is achieved through emphasizing the creation of code that is simple and readable rather than clever.</para>
+      </section>
+      <section id="id-566000669265">
+        <title>Anticipating Change</title>
+        <para id="id12636950">Most software will change over time, and the anticipation of change drives many aspects of software construction. Software is unavoidably part of changing external environments, and changes in those outside environments affect software in diverse ways.</para>
+        <para id="id17863298">Anticipating change is supported by many specific techniques:</para>
+        <list id="id19739328" list-type="bulleted">
+          <item>Communication methods (for example, standards for document formats and contents) </item>
+          <item>Programming languages (for example, language standards for languages like Java and C++) </item>
+          <item>Platforms (for example, programmer interface standards for operating system calls) </item>
+          <item>Tools (for example, diagrammatic standards for notations like UML (Unified Modeling Language)) </item>
+        </list>
+      </section>
+      <section id="id-715928907045">
+        <title>Constructing for Verification</title>
+        <para id="id6868939">Constructing for verification means building software in such a way that faults can be ferreted out readily by the software engineers writing the software, as well as during independent testing and operational activities. Specific techniques that support constructing for verification include following coding standards to support code reviews, unit testing, organizing code to support automated testing, and restricted use of complex or hard-to-understand language structures, among others.</para>
+      </section>
+      <section id="id-0739910872963">
+        <title>Standards in Construction</title>
+        <para id="id3902961">Standards that directly affect construction issues include Use of external standards. Construction depends on the use of external standards for construction languages, construction tools, technical interfaces, and interactions between Software Construction and other software engineering. Standards come from numerous sources, including hardware and software interface specifications such as the Object Management Group (OMG) and international organizations such as the IEEE or ISO.</para>
+        <para id="id19621031">Use of internal standards. Standards may also be created on an organizational basis at the corporate level or for use on specific projects. These standards support coordination of group activities, minimizing complexity, anticipating change, and constructing for verification.</para>
+      </section>
+    </section>
+    <section id="id-673574287287">
+      <title>Managing Construction</title>
+      <section id="id-276219409522">
+        <title>Construction Models</title>
+        <para id="id19020847">Numerous models have been created to develop software, some of which emphasize construction more than others.</para>
+        <para id="id8448982">Some models are more linear from the construction point of view, such as the waterfall and staged-delivery life cycle models. These models treat construction as an activity which occurs only after significant prerequisite work has been completed - including detailed requirements work, extensive design work, and detailed planning. The more linear approaches tend to emphasize the activities that precede construction (requirements and design), and tend to create more distinct separations between the activities. In these models, the main emphasis of construction may be coding.</para>
+        <para id="id17073402">Other models are more iterative, such as evolutionary prototyping, Extreme Programming, and Scrum. These approaches tend to treat construction as an activity that occurs concurrently with other software development activities, including requirements, design, and planning, or overlaps them. These approaches tend to mix design, coding, and testing activities, and they often treat the combination of activities as construction. </para>
+        <para id="id18977553">Consequently, what is considered to be “construction” depends to some degree on the life cycle model used.</para>
+      </section>
+      <section id="id-279009416581">
+        <title>Construction Planning</title>
+        <para id="id14545851">The choice of construction method is a key aspect of the construction planning activity. The choice of construction method affects the extent to which construction prerequisites are performed, the order in which they are performed, and the degree to which they are expected to be completed before construction work begins.</para>
+        <para id="id19831069">The approach to construction affects the project’s ability to reduce complexity, anticipate change, and construct for verification. Each of these objectives may also be addressed at the process, requirements, and design levels - but they will also be influenced by the choice of construction method.</para>
+        <para id="id13639397">Construction planning also defines the order in which components are created and integrated, the software quality management processes, the allocation of task assignments to specific software engineers, and the other tasks, according to the chosen method. </para>
+      </section>
+      <section id="id-027834501439">
+        <title>Construction Measurement</title>
+        <para id="id5333428">Numerous construction activities and artifacts can be measured, including code developed, code modified, code reused, code destroyed, code complexity, code inspection statistics, fault-fix and fault-find rates, effort, and scheduling. These measurements can be useful for purposes of managing construction, ensuring quality during construction, improving the construction process, as well as for other reasons. </para>
+      </section>
+    </section>
+    <section id="id-595932248797">
+      <title>Practical considerations</title>
+      <para id="id19268436">Construction is an activity in which the software has to come to terms with arbitrary and chaotic real-world constraints, and to do so exactly. Due to its proximity to real-world constraints, construction is more driven by practical considerations than some other KAs, and software engineering is perhaps most craft-like in the construction area.</para>
+      <section id="id-110431626287">
+        <title>Construction Design</title>
+        <para id="id7107218">Some projects allocate more design activity to construction; others to a phase explicitly focused on design. Regardless of the exact allocation, some detailed design work will occur at the construction level, and that design work tends to be dictated by immovable constraints imposed by the real-world problem that is being addressed by the software. Just as construction workers building a physical structure must make small-scale modifications to account for unanticipated gaps in the builder’s plans, software construction workers must make modifications on a smaller or larger scale to flesh out details of the software design during construction.</para>
+      </section>
+      <section id="id-132845663885">
+        <title>Construction Languages</title>
+        <para id="id13408692">Construction languages include all forms of communication by which a human can specify an executable problem solution to a computer.</para>
+        <para id="id19293429">The simplest type of construction language is a configuration language, in which software engineers choose from a limited set of predefined options to create new or custom software installations. The text-based configuration files used in both the Windows and Unix operating systems are examples of this, and the menu style selection lists of some program generators constitute another.</para>
+        <para id="id16508839">Toolkit languages are used to build applications out of toolkits (integrated sets of application-specific reusable parts), and are more complex than configuration languages. Toolkit languages may be explicitly defined as application programming languages (for example, scripts), or may simply be implied by the set of interfaces of a toolkit.</para>
+        <para id="id12416996">Programming languages are the most flexible type of construction languages. They also contain the least amount of information about specific application areas and development processes, and so require the most training and skill to use effectively.</para>
+        <para id="id19041129">There are three general kinds of notation used for programming languages, namely:</para>
+        <list id="id19201142" list-type="bulleted">
+          <item>Linguistic </item>
+          <item>Formal </item>
+          <item>Visual </item>
+        </list>
+        <para id="id3866163">Linguistic notations are distinguished in particular by the use of word-like strings of text to represent complex software constructions, and the combination of such word-like strings into patterns that have a sentence-like syntax. Properly used, each such string should have a strong semantic connotation providing an immediate intuitive understanding of what will happen when the underlying software construction is executed.</para>
+        <para id="id14342782">Formal notations rely less on intuitive, everyday meanings of words and text strings and more on definitions backed up by precise, unambiguous, and formal (or mathematical) definitions. Formal construction notations and formal methods are at the heart of most forms of system programming, where accuracy, time behavior, and testability are more important than ease of mapping into natural language. Formal constructions also use precisely defined ways of combining symbols that avoid the ambiguity of many natural language constructions.</para>
+        <para id="id8498939">Visual notations rely much less on the text-oriented notations of both linguistic and formal construction, and instead rely on direct visual interpretation and placement of visual entities that represent the underlying software. Visual construction tends to be somewhat limited by the difficulty of making “complex“ statements using only movement of visual entities on a display. However, it can also be a powerful tool in cases where the primary programming task is simply to build and “adjust“ a visual interface to a program, the detailed behavior of which has been defined earlier.</para>
+      </section>
+      <section id="id-461166962415">
+        <title>Object-Oriented Languages</title>
+        <para id="id15912986">There are almost two dozen major object-oriented programming languages in use today. But the leading commercial o-o languages are far fewer in number. These are: </para>
+        <list id="id4241877" list-type="bulleted">
+          <item>C++ </item>
+          <item>Smalltalk </item>
+          <item>Java</item>
+        </list>
+        <section id="id-423474978984">
+          <title>C++ </title>
+          <para id="id19729587">C++ is an object-oriented version of C. It is compatible with C (it is actually a superset), so that existing C code can be incorporated into C++ programs. C++ programs are fast and efficient, qualities which helped make C an extremely popular programming language. It sacrifices some flexibility in order to remain efficient, however. C++ uses compile-time binding, which means that the programmer must specify the specific class of an object, or at the very least, the most general class that an object can belong to. This makes for high run-time efficiency and small code size, but it trades off some of the power to reuse classes. </para>
+          <para id="id8373144">C++ has become so popular that most new C compilers are actually C/C++ compilers. However, to take full advantage of object-oriented programming, one must program (and think!) in C++, not C. This can often be a major problem for experienced C programmers. Many programmers think they are coding in C++, but instead are only using a small part of the language's object-oriented power. </para>
+        </section>
+        <section id="id-532932454946">
+          <title>Smalltalk</title>
+          <para id="id10622473">Smalltalk is a pure object-oriented language. While C++ makes some practical compromises to ensure fast execution and small code size, Smalltalk makes none. It uses run-time binding, which means that nothing about the type of an object need be known before a Smalltalk program is run. </para>
+          <para id="id16703433">Smalltalk programs are considered by most to be significantly faster to develop than C++ programs. A rich class library that can be easily reused via inheritance is one reason for this. Another reason is Smalltalk's dynamic development environment. It is not explicitly compiled, like C++. This makes the development process more fluid, so that "what if" scenarios can be easily tried out, and classes definitions easily refined. But being purely object-oriented, programmers cannot simply put their toes in the o-o waters, as with C++. For this reason, Smalltalk generally takes longer to master than C++. But most of this time is actually spent learning object-oriented methodology and techniques, rather than details of a particular programming language. In fact, Smalltalk is syntactically very simple, much more so than either C or C++. </para>
+          <para id="id17073287">Unlike C++, which has become standardized, The Smalltalk language differs somewhat from one implementation to another. The most popular commercial "dialects" of Smalltalk are: </para>
+          <list id="id3264072" list-type="bulleted">
+            <item>VisualWorks from ParcPlace-Digitalk, Inc. </item>
+            <item>Smalltalk/V and Visual Smalltalk from ParcPlace-Digitalk Inc. </item>
+            <item>VisualAge from IBM </item>
+          </list>
+          <para id="id19928937">1. VisualWorks</para>
+          <para id="id14114654">VisualWorks is arguably the most powerful of Smalltalks. VisualWorks was developed by ParcPlace, which grew out of the original Xerox PARC project that invented the Smalltalk language. VisualWorks is platform-independent, so that an application written under one operating system, say, Microsoft Windows, can work without any modification on any of a wide range of platform supported by ParcPlace, from Sun Solaris to Macintosh. VisualWorks also features a GUI (Graphic User Interface) builder that is well-integrated into the product. </para>
+          <para id="id19903084">2. Smalltalk/V and Visual Smalltalk</para>
+          <para id="id16609099">Digitalk's versions of Smalltalk are somewhat smaller and simpler, and are specifically tailored to IBM compatible PCs. A Macintosh version was available, but support has since been abandoned. This does not bode well for Digitalk cross-platform efforts. Digitalk has a separate GUI builder, called PARTS Workbench (bundled with Visual Smalltalk), which allows quick construct of an application. </para>
+          <para id="id16841051">ParcPlace and Digitalk were merged into a single company, ParcPlace-Digitalk, Inc. The future of the Digitalk product line is uncertain, and it may just be spun off back into a separate company.</para>
+          <para id="id11155418">3. VisualAge</para>
+          <para id="id15784670">IBM's version of Smalltalk, VisualAge, is comparable to Smalltalk/V with PARTS. Both of these Smalltalks allow programmers to readily exploit machine-specific features, at the expense of some portability. IBM has adapted existing industry standards for such things as file management and screen graphics. When IBM talks, people listen, and IBM has made a substantial commitment to Smalltalk. </para>
+        </section>
+        <section id="id-809377245537">
+          <title>Java</title>
+          <para id="id19867417">Java is the latest, flashiest object-oriented language. It has taken the software world by storm due to its close ties with the Internet and Web browsers. It is designed as a portable language that can run on any web-enabled computer via that computer's Web browser. As such, it offers great promise as the standard Internet and Intranet programming language.</para>
+          <para id="id16580684">Java is a curious mixture of C++ and Smalltalk. It has the syntax of C++, making it easy (or difficult) to learn, depending on your experience. But it has improved on C++ in some important areas. For one thing, it has no pointers, low-level programming constructs that make for error-prone programs. Like Smalltalk, it has garbage collection, a feature that frees the programmer from explicitly allocating and de-allocating memory. And it runs on a Smalltalk-style virtual machine, software built into your web browser which executes the same standard compiled Java bytecodes no matter what type of computer you have.</para>
+          <para id="id3257908">Java development tools are being rapidly deployed, and are available from such major software companies as IBM, Microsoft, and Symantec.</para>
+        </section>
+      </section>
+      <section id="id-145799090375">
+        <title>Coding</title>
+        <para id="id15900762">The following considerations apply to the software construction coding activity:</para>
+        <list id="id16165932" list-type="bulleted">
+          <item>Techniques for creating understandable source code, including naming and source code layout </item>
+          <item>Use of classes, enumerated types, variables, named constants, and other similar entities </item>
+          <item>Use of control structures </item>
+          <item>Handling of error conditions—both planned errors and exceptions (input of bad data, for example) </item>
+          <item>Prevention of code-level security breaches (buffer overruns or array index overflows, for example) </item>
+          <item>Resource usage via use of exclusion mechanisms and discipline in accessing serially reusable resources (including threads or database locks) </item>
+          <item>Source code organization (into statements, routines, classes, packages, or other structures) </item>
+          <item>Code documentation </item>
+          <item>Code tuning </item>
+        </list>
+      </section>
+      <section id="id-342331194791">
+        <title>Construction Testing</title>
+        <para id="id17946776">Construction involves two forms of testing, which are often performed by the software engineer who wrote the code:</para>
+        <list id="id12570175" list-type="bulleted">
+          <item>Unit testing </item>
+          <item>Integration testing </item>
+        </list>
+        <para id="id19233217">The purpose of construction testing is to reduce the gap between the time at which faults are inserted into the code and the time those faults are detected. In some cases, construction testing is performed after code has been written. In other cases, test cases may be created before code is written.</para>
+        <para id="id12019155">Construction testing typically involves a subset of types of testing. For instance, construction testing does not typically include system testing, alpha testing, beta testing, stress testing, configuration testing, usability testing, or other, more specialized kinds of testing.</para>
+        <para id="id15768587">Two standards have been published on the topic: IEEE Std 829-1998, IEEE Standard for Software Test Documentation and IEEE Std 1008-1987, IEEE Standard for Software Unit Testing.</para>
+      </section>
+      <section id="id-839231046425">
+        <title>Reuse</title>
+        <para id="id11675632">Implementing software reuse entails more than creating and using libraries of assets. It requires formalizing the practice of reuse by integrating reuse processes and activities into the software life cycle. However, reuse is important enough in software construction that it is included here as a topic.</para>
+        <para id="id19713309">The tasks related to reuse in software construction during coding and testing are: </para>
+        <list id="id6003373" list-type="bulleted">
+          <item>The selection of the reusable units, databases, test procedures, or test data </item>
+          <item>The evaluation of code or test reusability </item>
+          <item>The reporting of reuse information on new code, test procedures, or test data </item>
+        </list>
+      </section>
+      <section id="id-978983595516">
+        <title>Construction Quality</title>
+        <para id="id15752704">Numerous techniques exist to ensure the quality of code as it is constructed. The primary techniques used for construction include:</para>
+        <list id="id16080500" list-type="bulleted">
+          <item>Unit testing and integration testing </item>
+          <item>Test-first development </item>
+          <item>Code stepping </item>
+          <item>Use of assertions </item>
+          <item>Debugging </item>
+          <item>Technical reviews </item>
+          <item>Static analysis (IEEE1028)</item>
+        </list>
+        <para id="id19453076">The specific technique or techniques selected depend on the nature of the software being constructed, as well as on the skills set of the software engineers performing the construction.</para>
+        <para id="id17926431">Construction quality activities are differentiated from other quality activities by their focus. Construction quality activities focus on code and on artifacts that are closely related to code: small-scale designs - as opposed to other artifacts that are less directly connected to the code, such as requirements, high-level designs, and plans.</para>
+      </section>
+      <section id="id-855219553175">
+        <title>Integration</title>
+        <para id="id19706626">A key activity during construction is the integration of separately constructed routines, classes, components, and subsystems. In addition, a particular software system may need to be integrated with other software or hardware systems.</para>
+        <para id="id19398840">Concerns related to construction integration include planning the sequence in which components will be integrated, creating scaffolding to support interim versions of the software, determining the degree of testing and quality work performed on components before they are integrated, and determining points in the project at which interim versions of the software are tested.</para><para id="element-108">References:</para><para id="element-350">http://en.wikipedia.org/wiki/Software_development,
+http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-171Fall2003/CourseHome/,
+http://www.cs.cornell.edu/courses/cs501/2008sp/,
+http://www.comp.lancs.ac.uk/computing/resources/IanS/SE7/, 
+http://www.ee.unb.ca/kengleha/courses/CMPE3213/IntroToSoftwareEng.htm,
+http://www.generaldigital.com/software_services/qualifications.htm, etc...</para>
+      </section>
+    </section>
+  </content>
+</document>

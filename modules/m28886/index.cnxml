@@ -1,0 +1,437 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Assignment</title>
+  <metadata>
+  <md:content-id>m28886</md:content-id><md:title>Assignment</md:title>
+  <md:abstract>This is the assignment for the Software Engineering course.</md:abstract>
+  <md:uuid>c2cc0a44-50a8-4115-8916-055500460750</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-471178516281">
+      <title>Assignment 1. Project Feasibility Study and Plan</title>
+      <para id="id35573805">Write a short feasibility report that describes the project that you have selected. The exact form of the report is up to you, but it should be well written and suitable to present to an external client. The length is likely to be between five and ten pages. </para>
+      <para id="id37101055">The report should include the following:</para>
+      <list id="id35708721" list-type="bulleted">
+        <item>The client for whom the work will be done. </item>
+        <item>Visibility plan. How will you keep in contact with the client and report progress? How will you communicate among your team? </item>
+        <item>A statement of the task to be undertaken. </item>
+        <item>A preliminary requirements analysis. </item>
+        <item>Suggested deliverables. </item>
+        <item>Process to be followed, e.g., modified waterfall model, iterative refinement, prototype, phased development, etc. </item>
+        <item>Outline plan, showing principal activities and milestones. </item>
+        <item>Discussion of business considerations. </item>
+        <item>Risk analysis. What can go wrong? What is your fallback plan? </item>
+        <item>Probable technical requirements </item>
+      </list>
+      <para id="id35663487">This report is a group assignment. All members of the project team should share in the production of the report. </para>
+    </section>
+    <section id="id-90774542802">
+      <title>Assignment 2. Progress Report and Presentation</title>
+      <para id="id37118853">During the semester each team will give three presentations with associated reports on the work completed. You will make a 45 minute presentation to the client, the Instructor and the Teaching Assistant assigned to your project. Everybody is expected to be a presenter at least once. </para>
+      <para id="id35591888">The first progress report and presentation should complete one third of the total work from the feasibility study. </para>
+      <para id="id36954013">If you are following an iterative process the first progress report should mark a major milestone when you can report visible progress to your client. Typically, this will include a first set of requirements, a provisional design and a prototype that can be used to demonstrate the functionality of the system, including user interface design.</para>
+      <para id="id36271520">If you are following a modified waterfall development process, this progress report should include completion of the requirements phase. Carry out the requirements analysis, definition and specification for your project. Write a requirements document. The exact form of the document is up to you, but it should be well written and suitable to present to your client. In writing a requirements report, pay particular attention to the following:</para>
+      <list id="id35122620" list-type="bulleted">
+        <item>The report must be understandable by the client. </item>
+        <item>The requirements must be specified in sufficient detail to test against the implementation. </item>
+        <item>The requirements must be the client's, not your own concepts. </item>
+        <item>Design concepts must be clearly separated from requirements. </item>
+        <item>Requirements should be partitioned into those that must be met by the first release and those that are optional. </item>
+      </list>
+    </section>
+    <section id="id-239408181217">
+      <title>Assignment 3. Progress Report and Presentation </title>
+      <para id="id33844221">The second presentation and report will follow the same format as the first. You will make a 45 minute presentation to the client, the Instructor and the Teaching Assistant assigned to your project. Remember that everybody is expected to be a presenter at least once during the semester. </para>
+      <para id="id36850513">The second progress report and presentation should complete two thirds of the total work from the feasibility study. </para>
+      <para id="id34433701">If you are following an iterative process this progress report should mark a major milestone when you can report visible progress to your client. </para>
+      <para id="id36830432">If you are following a modified waterfall process, this progress report will be the completion of the design phase. You should probably have already begun implementation.</para>
+      <para id="id34088559">The exact form of the report is up to you, but it should be well written and suitable to present to your client. In writing a design report, pay particular attention to the following:</para>
+      <list id="id37239221" list-type="bulleted">
+        <item>The report must be understandable by the client. </item>
+        <item>The design should include both system and program design. </item>
+        <item>Design concepts must be clearly separated from requirements and the implementation. </item>
+        <item>Update your schedule to confirm that you will have an operational system by the end of the semester. </item>
+      </list>
+    </section>
+    <section id="id-300698047207">
+      <title>Assignment 4. Final Presentation</title>
+      <para id="id33823596">The final presentation and report will follow the same format as the others. You will make a 45 minute presentation to the client, the Instructor and the Teaching Assistant assigned to your project. Remember that everybody is expected to be a presenter at least once during the semester. </para>
+      <para id="id33823600">This presentation should describe to the client and the course team what has been accomplished during the semester and should include a demonstration of your system in operation. The documentation should be a complete hand-over package, which has been entered into your project management system, so that the client's staff can put your project into production, extend and maintain it.</para>
+    </section>
+    <section id="id-945218392641">
+      <title>Assignment grading rubric</title>
+      <table id="id36338906" summary="">
+        <tgroup cols="5">
+          <colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+          <colspec colnum="3" colname="c3"/>
+          <colspec colnum="4" colname="c4"/>
+          <colspec colnum="5" colname="c5"/>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="c2">Content &amp; Criteria</entry>
+              <entry>Points Possible</entry>
+              <entry>Points Obtained</entry>
+              <entry>Comments</entry>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Feasibility and Planning</entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>What is the scope of the proposed project?</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Is the project technically feasible?</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>What are the projected benefits?</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>What are the costs, timetable?</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Project Risk Identification?</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Requirements</entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Requirements identification</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Requirements analysis </entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Requirements definition </entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Requirements specification </entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Requirements report</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">System and Software Design </entry>
+              <entry>20</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Design describes the system from the software developers' viewpoint </entry>
+              <entry>5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>System design: Match the requirements to hardware or software systems. Establishes an overall system architecture</entry>
+              <entry>5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Program design: Represent the software system functions in a form that can be transformed into one or more executable programs</entry>
+              <entry>5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Tools: apply tools for designing</entry>
+              <entry>5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Implementation and Testing </entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Is the level of language that the program offers clearly indicated?</entry>
+              <entry>1</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Is it easy to start the program?</entry>
+              <entry>1</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Is the user interface easy to understand? (For example, is the screen layout clear and easy to interpret?)</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Does the program include scoring?</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Individual components are tested against specifications. </entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>The individual program units are integrated and tested against the design by the students as a complete system.</entry>
+              <entry>1</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>The complete system is tested against the requirements by the client.</entry>
+              <entry>1</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Maintenance</entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Operation: The system is put into practical use.</entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Maintenance: Errors and problems are identified and fixed.</entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Evolution: The system evolves over time as requirements change, to add new functions or adapt the technical environment.</entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Phase out: The system is withdrawn from service.</entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Quality of software </entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Maintainability- easy to maintain to meet changing needs</entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Dependability- reliability, security, safety </entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Efficiency- not wasting system resources </entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Usability- user friendly, good documentation </entry>
+              <entry>2.5</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Performance of each student’s effort in the project</entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Student had a major role in the success of the project</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Student always showed up on time for project meetings</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Student completed his/her part of the project.</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Student showed a lot of interest in the project</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Student played a major role in the project design, implementation and validation</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Report</entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Overview/introduction</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Organization of body</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Quality of result</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Effective data presentation</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Conclusion</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry namest="c1" nameend="c2">Oral presentation</entry>
+              <entry>10</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Organization (presentation refined and clearly explained, information logically introduced and explained, the area of study's connection to the broad topic and the group's work is clearly explained)</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Content (presentation reveals good use of sources, provides pertinent information)</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Presentation (speaks clearly, uses appropriate language, uses appropriate body language, meets time specifications)</entry>
+              <entry>2</entry>
+              <entry/>
+              <entry/>
+            </row>
+            <row>
+              <entry/>
+              <entry>Questions</entry>
+              <entry>4</entry>
+              <entry/>
+              <entry/>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </content>
+</document>

@@ -1,0 +1,405 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Software Testing</title>
+  <metadata>
+  <md:content-id>m28939</md:content-id><md:title>Software Testing</md:title>
+  <md:abstract>This module provides an introduction to software testing. Topics covered include basic definitions of testing, validation and verification; the levels of testing from unit testing through to acceptance testing; the relationship with requirements and design specifications; and test documentation.</md:abstract>
+  <md:uuid>9ca461b1-ad2e-4421-84d7-641857e26efb</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-136702079809">
+      <title>Introduction</title>
+      <para id="id7529616">Software Testing is the process of executing a program or system with the intent of finding errors. Or, it involves any activity aimed at evaluating an attribute or capability of a program or system and determining that it meets its required results. Software is not unlike other physical processes where inputs are received and outputs are produced. Where software differs is in the manner in which it fails. Most physical systems fail in a fixed (and reasonably small) set of ways. By contrast, software can fail in many bizarre ways. Detecting all of the different failure modes for software is generally infeasible. </para>
+      <para id="id3645634">Unlike most physical systems, most of the defects in software are design errors, not manufacturing defects. Software does not suffer from corrosion, wear-and-tear, generally it will not change until upgrades, or until obsolescence. So once the software is shipped, the design defects, or bugs, will be buried in and remain latent until activation. </para>
+      <para id="id3818056">Software bugs will almost always exist in any software module with moderate size: not because programmers are careless or irresponsible, but because the complexity of software is generally intractable, and humans have only limited ability to manage complexity. It is also true that for any complex systems, design defects can never be completely ruled out. </para>
+      <para id="id2875347">Discovering the design defects in software, is equally difficult, for the same reason of complexity. Because software and any digital systems are not continuous, testing boundary values are not sufficient to guarantee correctness. All the possible values need to be tested and verified, but complete testing is infeasible. Exhaustively testing a simple program to add only two integer inputs of 32-bits (yielding 2^64 distinct test cases) would take hundreds of years, even if tests were performed at a rate of thousands per second. Obviously, for a realistic software module, the complexity can be far beyond the example mentioned here. If inputs from the real world are involved, the problem will get worse, because timing and unpredictable environmental effects and human interactions are all possible input parameters under consideration. </para>
+      <para id="id6498274">A further complication has to do with the dynamic nature of programs. If a failure occurs during preliminary testing and the code is changed, the software may now work for a test case that it didn't work for previously. But its behavior on pre-error test cases that it passed before can no longer be guaranteed. To account for this possibility, testing should be restarted. The expense of doing this is often prohibitive. </para>
+      <para id="id7997088">An interesting analogy parallels the difficulty in software testing with the pesticide (known as the Pesticide Paradox): Every method you use to prevent or find bugs leaves a residue of subtler bugs against which those methods are ineffectual. But this alone will not guarantee to make the software better, because the Complexity Barrier principle states: Software complexity (and therefore that of bugs) grows to the limits of our ability to manage that complexity. By eliminating the (previous) easy bugs you allowed another escalation of features and complexity, but his time you have subtler bugs to face, just to retain the reliability you had before. Society seems to be unwilling to limit complexity because we all want that extra bell, whistle, and feature interaction. Thus, our users always push us to the complexity barrier and how close we can approach that barrier is largely determined by the strength of the techniques we can wield against ever more complex and subtle bugs. </para>
+      <para id="id6895213">Regardless of the limitations, testing is an integral part in software development. It is broadly deployed in every phase in the software development cycle. Typically, more than 50% percent of the development time is spent in testing. Testing is usually performed for the following purposes:</para>
+      <section id="id-924616004943">
+        <title>To improve quality</title>
+        <para id="id6696186">As computers and software are used in critical applications, the outcome of a bug can be severe. Bugs can cause huge losses. Bugs in critical systems have caused airplane crashes, allowed space shuttle missions to go awry, halted trading on the stock market, and worse. Bugs can kill. Bugs can cause disasters. In a computerized embedded world, the quality and reliability of software is a matter of life and death. </para>
+        <para id="id6132368">Quality means the conformance to the specified design requirement. Being correct, the minimum requirement of quality, means performing as required under specified circumstances. Debugging, a narrow view of software testing, is performed heavily to find out design defects by the programmer. The imperfection of human nature makes it almost impossible to make a moderately complex program correct the first time. Finding the problems and get them fixed, is the purpose of debugging in programming phase. </para>
+      </section>
+      <section id="id-417299910664">
+        <title>For Verification &amp; Validation (V&amp;V) </title>
+        <para id="id4473816">An important purpose of testing is verification and validation. Testing can serve as metrics. It is heavily used as a tool in the V&amp;V process. Testers can make claims based on interpretations of the testing results, which either the product works under certain situations, or it does not work. We can also compare the quality among different products under the same specification, based on results from the same test.</para>
+        <para id="id2963972">We can not test quality directly, but we can test related factors to make quality visible. Quality has three sets of factors: functionality, engineering, and adaptability. These three sets of factors can be thought of as dimensions in the software quality space. Each dimension may be broken down into its component factors and considerations at successively lower levels of detail. Table 1 illustrates some of the most frequently cited quality considerations. </para>
+        <table id="id8081458" summary="">
+          <tgroup cols="3">
+            <colspec colnum="1" colname="c1"/>
+            <colspec colnum="2" colname="c2"/>
+            <colspec colnum="3" colname="c3"/>
+            <tbody>
+              <row>
+                <entry>Functionality(exterior quality)</entry>
+                <entry>Engineering(interior quality)</entry>
+                <entry>Adaptability(future quality)</entry>
+              </row>
+              <row>
+                <entry>Correctness</entry>
+                <entry>Efficiency</entry>
+                <entry>Flexibility</entry>
+              </row>
+              <row>
+                <entry>Reliability</entry>
+                <entry>Testability</entry>
+                <entry>Reusability</entry>
+              </row>
+              <row>
+                <entry>Usability</entry>
+                <entry>Documentation</entry>
+                <entry>Maintainability</entry>
+              </row>
+              <row>
+                <entry>Integrity</entry>
+                <entry>Structure</entry>
+                <entry/>
+              </row>
+              <row>
+                <entry namest="c1" nameend="c3">Table 1.  Typical Software Quality Factors  </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+        <para id="id3752398">Good testing provides measures for all relevant factors. The importance of any particular factor varies from application to application. Any system where human lives are at stake must place extreme emphasis on  reliability and integrity. In the typical business system usability and maintainability are the key factors, while for a one-time scientific program neither may be significant. Our testing, to be fully effective, must be geared to measuring each relevant factor and thus forcing quality to become tangible and visible. </para>
+        <para id="id6959211">Tests with the purpose of validating the product works are named clean tests, or positive tests. The drawbacks are that it can only validate that the software works for the specified test cases. A finite number of tests can not validate that the software works for all situations. On the contrary, only one failed test is sufficient enough to show that the software does not work. Dirty tests, or negative tests, refers to the tests aiming at breaking the software, or showing that it does not work. A piece of software must have sufficient exception handling capabilities to survive a significant level of dirty tests. </para>
+        <para id="id6496456">A testable design is a design that can be easily validated, falsified and maintained. Because testing is a rigorous effort and requires significant time and cost, design for testability is also an important design rule for software development. </para>
+      </section>
+      <section id="id-0151558081454">
+        <title>For reliability estimation</title>
+        <para id="id5986772">Software reliability has important relations with many aspects of software, including the structure, and the amount of testing it has been subjected to. Based on an operational profile (an estimate of the relative frequency of use of various inputs to the program), testing can serve as a statistical sampling method to gain failure data for reliability estimation. </para>
+        <para id="id3154834">Software testing is not mature. It still remains an art, because we still cannot make it a science. We are still using the same testing techniques invented 20-30 years ago, some of which are crafted methods or heuristics rather than good engineering methods. Software testing can be costly, but not testing software is even more expensive, especially in places that human lives are at stake. Solving the software-testing problem is no easier than solving the Turing halting problem. We can never be sure that a piece of software is correct. We can never be sure that the specifications are correct. No verification system can verify every correct program. We can never be certain that a verification system is correct either. </para>
+      </section>
+    </section>
+    <section id="id-512625274307">
+      <title>Test Levels</title>
+      <section id="id-0632210233619">
+        <title>The target of the test</title>
+        <para id="id2979207">Software testing is usually performed at different levels along the development and maintenance processes. That is to say, the target of the test can vary: a single module, a group of such modules (related by purpose, use, behavior, or structure), or a whole system. Three big test stages can be conceptually distinguished, namely Unit, Integration, and System. No process model is implied, nor are any of those three stages assumed to have greater importance than the other two.</para>
+        <section id="id-185069667389">
+          <title>Unit testing </title>
+          <para id="id6819138">Unit testing verifies the functioning in isolation of software pieces which are separately testable. Depending on the context, these could be the individual subprograms or a larger component made of tightly related units. A test unit is defined more precisely in the IEEE Standard for Software Unit Testing (IEEE1008-87), which also describes an integrated approach to systematic and documented unit testing. Typically, unit testing occurs with access to the code being tested and with the support of debugging tools, and might involve the programmers who wrote the code.</para>
+        </section>
+        <section id="id-209225396486">
+          <title>Integration testing </title>
+          <para id="id3670557">Integration testing is the process of verifying the interaction between software components. Classical integration testing strategies, such as top-down or bottom-up, are used with traditional, hierarchically structured software.</para>
+          <para id="id3829896">Modern systematic integration strategies are rather architecture-driven, which implies integrating the software components or subsystems based on identified functional threads. Integration testing is a continuous activity, at each stage of which software engineers must abstract away lower-level perspectives and concentrate on the perspectives of the level they are integrating. Except for small, simple software, systematic, incremental integration testing strategies are usually preferred to putting all the components together at once, which is pictorially called “big bang” testing.</para>
+        </section>
+        <section id="id-551794633144">
+          <title>System testing</title>
+          <para id="id3831066">System testing is concerned with the behavior of a whole system. The majority of functional failures should already have been identified during unit and integration testing. System testing is usually considered appropriate for comparing the system to the non-functional system requirements, such as security, speed, accuracy, and reliability. External interfaces to other applications, utilities, hardware devices, or the operating environment are also evaluated at this level. </para>
+        </section>
+      </section>
+      <section id="id-710859245935">
+        <title>Objectives of Testing</title>
+        <para id="id7462001">Testing is conducted in view of a specific objective, which is stated more or less explicitly, and with varying degrees of precision. Stating the objective in precise, quantitative terms allows control to be established over the test process.</para>
+        <para id="id7517102">Testing can be aimed at verifying different properties. Test cases can be designed to check that the functional specifications are correctly implemented, which is variously referred to in the literature as conformance testing, correctness testing, or functional testing. However, several other nonfunctional properties may be tested as well, including performance, reliability, and usability, among many others.</para>
+        <para id="id7305253">Other important objectives for testing include (but are not limited to) reliability measurement, usability evaluation, and acceptance, for which different approaches would be taken. Note that the test objective varies with the test target; in general, different purposes being addressed at a different level of testing.</para>
+        <para id="id3625458">References recommended above for this topic describe the set of potential test objectives. The sub-topics listed below are those most often cited in the literature. Note that some kinds of testing are more appropriate for custom-made software packages, installation testing, for example; and others for generic products, like beta testing.</para>
+        <section id="id-207847557641">
+          <title>Qualification testing </title>
+          <para id="id3645637">Qualification testing checks the system behavior against the customer’s requirements, however these may have been expressed; the customers undertake, or specify, typical tasks to check that their requirements have been met or that the organization has identified these for the target market for the software. This testing activity may or may not involve the developers of the system.</para>
+        </section>
+        <section id="id-00186103034673">
+          <title>Installation testing </title>
+          <para id="id3100752">Usually after completion of software and acceptance testing, the software can be verified upon installation in the target environment. Installation testing can be viewed as system testing conducted once again according to hardware configuration requirements. Installation procedures may also be verified.</para>
+        </section>
+        <section id="id-344520937527">
+          <title>Alpha and beta testing</title>
+          <para id="id6073661">Before the software is released, it is sometimes given to a small, representative set of potential users for trial use, either in-house (alpha testing) or external (beta testing). These users report problems with the product. Alpha and beta use is often uncontrolled, and is not always referred to in a test plan.</para>
+        </section>
+        <section id="id-137989790696">
+          <title>Reliability achievement and evaluation </title>
+          <para id="id3804642">In helping to identify faults, testing is a means to improve reliability. By contrast, by randomly generating test cases according to the operational profile, statistical measures of reliability can be derived. Using reliability growth models, both objectives can be pursued together.</para>
+          <para id="id4231272">Software reliability refers to the probability of failure-free operation of a system. It is related to many aspects of software, including the testing process. Directly estimating software reliability by quantifying its related factors can be difficult. Testing is an effective sampling method to measure software reliability. Guided by the operational profile, software testing (usually black-box testing) can be used to obtain failure data, and an estimation model can be further used to analyze the data to estimate the present reliability and predict future reliability. Therefore, based on the estimation, the developers can decide whether to release the software, and the users can decide whether to adopt and use the software. Risk of using software can also be assessed based on reliability information. The primary goal of testing should be to measure the dependability of tested software. </para>
+          <para id="id4887289">There is agreement on the intuitive meaning of dependable software: it does not fail in unexpected or catastrophic ways. Robustness testing and stress testing are variances of reliability testing based on this simple criterion. </para>
+          <para id="id6921782">The robustness of a software component is the degree to which it can function correctly in the presence of exceptional inputs or stressful environmental conditions. Robustness testing differs with correctness testing in the sense that the functional correctness of the software is not of concern. It only watches for robustness problems such as machine crashes, process hangs or abnormal termination. The oracle is relatively simple, therefore robustness testing can be made more portable and scalable than correctness testing. This research has drawn more and more interests recently, most of which uses commercial operating systems as their target. </para>
+          <para id="id3669192">Stress testing, or load testing, is often used to test the whole system rather than the software alone. In such tests the software or system are exercised with or beyond the specified limits. Typical stress includes resource exhaustion, bursts of activities, and sustained high loads.</para>
+        </section>
+        <section id="id-954554044655">
+          <title>Regression testing</title>
+          <para id="id6794361">According to (IEEE610.12-90), regression testing is the “selective retesting of a system or component to verify that modifications have not caused unintended effects...” In practice, the idea is to show that software which previously passed the tests still does. Beizer defines it as any repetition of tests intended to show that the software’s behavior is unchanged, except insofar as required. Obviously a trade-off must be made between the assurance given by regression testing every time a change is made and the resources required to do that. </para>
+          <para id="id4419971">Regression testing can be conducted at each of the test levels. The target of the test and may apply to functional and nonfunctional testing.</para>
+        </section>
+        <section id="id-65416706633">
+          <title>Correctness testing</title>
+          <para id="id3055030">Correctness is the minimum requirement of software, the essential purpose of testing. Correctness testing will need some type of oracle, to tell the right behavior from the wrong one. The tester may or may not know the inside details of the software module under test, e.g. control flow, data flow, etc. Therefore, either a white-box point of view or black-box point of view can be taken in testing software. We must note that the black-box and white-box ideas are not limited in correctness testing only. </para>
+          <section id="id-070184778848">
+            <title>Black-box testing </title>
+            <para id="id8107505">The black-box approach is a testing method in which test data are derived from the specified functional requirements without regard to the final program structure. It is also termed data-driven, input/output driven, or requirements-based testing. Because only the functionality of the software module is of concern, black-box testing also mainly refers to functional testing - a testing method emphasized on executing the functions and examination of their input and output data. The tester treats the software under test as a black box - only the inputs, outputs and specification are visible, and the functionality is determined by observing the outputs to corresponding inputs. In testing, various inputs are exercised and the outputs are compared against specification to validate the correctness. All test cases are derived from the specification. No implementation details of the code are considered. </para>
+            <para id="id7114494">It is obvious that the more we have covered in the input space, the more problems we will find and therefore we will be more confident about the quality of the software. Ideally we would be tempted to exhaustively test the input space. But as stated above, exhaustively testing the combinations of valid inputs will be impossible for most of the programs, let alone considering invalid inputs, timing, sequence, and resource variables. Combinatorial explosion is the major roadblock in functional testing. To make things worse, we can never be sure whether the specification is either correct or complete. Due to limitations of the language used in the specifications (usually natural language), ambiguity is often inevitable. Even if we use some type of formal or restricted language, we may still fail to write down all the possible cases in the specification. Sometimes, the specification itself becomes an intractable problem: it is not possible to specify precisely every situation that can be encountered using limited words. And people can seldom specify clearly what they want - they usually can tell whether a prototype is, or is not, what they want after they have been finished. Specification problems contributes approximately 30 percent of all bugs in software.</para>
+            <para id="id6828289">The research in black-box testing mainly focuses on how to maximize the effectiveness of testing with minimum cost, usually the number of test cases. It is not possible to exhaust the input space, but it is possible to exhaustively test a subset of the input space. Partitioning is one of the common techniques. If we have partitioned the input space and assume all the input values in a partition is equivalent, then we only need to test one representative value in each partition to sufficiently cover the whole input space. Domain testing partitions the input domain into regions, and consider the input values in each domain an equivalent class. Domains can be exhaustively tested and covered by selecting a representative value(s) in each domain. Boundary values are of special interest. Experience shows that test cases that explore boundary conditions have a higher payoff than test cases that do not. Boundary value analysis requires one or more boundary values selected as representative test cases. The difficulties with domain testing are that incorrect domain definitions in the specification can not be efficiently discovered. </para>
+            <para id="id7242858">Good partitioning requires knowledge of the software structure. A good testing plan will not only contain black-box testing, but also white-box approaches, and combinations of the two. </para>
+          </section>
+          <section id="id-620177129697">
+            <title>White-box testing </title>
+            <para id="id3069678">Contrary to black-box testing, software is viewed as a white-box, or glass-box in white-box testing, as the structure and flow of the software under test are visible to the tester. Testing plans are made according to the details of the software implementation, such as programming language, logic, and styles. Test cases are derived from the program structure. White-box testing is also called glass-box testing, logic-driven testing or design-based testing.</para>
+            <para id="id5778078">There are many techniques available in white-box testing, because the problem of intractability is eased by specific knowledge and attention on the structure of the software under test. The intention of exhausting some aspect of the software is still strong in white-box testing, and some degree of exhaustion can be achieved, such as executing each line of code at least once (statement coverage), traverse every branch statements (branch coverage), or cover all the possible combinations of true and false condition predicates (Multiple condition coverage).</para>
+            <para id="id5567605">Control-flow testing, loop testing, and data-flow testing, all maps the corresponding flow structure of the software into a directed graph. Test cases are carefully selected based on the criterion that all the nodes or paths are covered or traversed at least once. By doing so we may discover unnecessary "dead" code - code that is of no use, or never get executed at all, which can not be discovered by functional testing. </para>
+            <para id="id6738660">In mutation testing, the original program code is perturbed and many mutated programs are created, each contains one fault. Each faulty version of the program is called a mutant. Test data are selected based on the effectiveness of failing the mutants. The more mutants a test case can kill, the better the test case is considered. The problem with mutation testing is that it is too computationally expensive to use. The boundary between black-box approach and white-box approach is not clear-cut. Many testing strategies mentioned above, may not be safely classified into black-box testing or white-box testing. It is also true for transaction-flow testing, syntax testing, finite-state testing, and many other testing strategies not discussed in this text. One reason is that all the above techniques will need some knowledge of the specification of the software under test. Another reason is that the idea of specification itself is broad - it may contain any requirement including the structure, programming language, and programming style as part of the specification content. </para>
+            <para id="id2963969">We may be reluctant to consider random testing as a testing technique. The test case selection is simple and straightforward: they are randomly chosen. Random testing is more cost effective for many programs. Some very subtle errors can be discovered with low cost. And it is also not inferior in coverage than other carefully designed testing techniques. One can also obtain reliability estimate using random testing results based on operational profiles. Effectively combining random testing with other testing techniques may yield more powerful and cost-effective testing strategies. </para>
+          </section>
+        </section>
+        <section id="id-589579551462">
+          <title>Performance testing</title>
+          <para id="id3162912">Not all software systems have specifications on performance explicitly. But every system will have implicit performance requirements. The software should not take infinite time or infinite resource to execute. "Performance bugs" sometimes are used to refer to those design problems in software that cause the system performance to degrade. </para>
+          <para id="id4490910">Performance has always been a great concern and a driving force of computer evolution. Performance evaluation of a software system usually includes: resource usage, throughput, stimulus-response time and queue lengths detailing the average or maximum number of tasks waiting to be serviced by selected resources. Typical resources that need to be considered include network bandwidth requirements, CPU cycles, disk space, disk access operations, and memory usage. The goal of performance testing can be performance bottleneck identification, performance comparison and evaluation, etc. The typical method of doing performance testing is using a benchmark - a program, workload or trace designed to be representative of the typical system usage.</para>
+        </section>
+        <section id="id-517983892237">
+          <title>Security testing </title>
+          <para id="id7531456">Software quality, reliability and security are tightly coupled. Flaws in software can be exploited by intruders to open security holes. With the development of the Internet, software security problems are becoming even more severe. </para>
+          <para id="id4590205">Many critical software applications and services have integrated security measures against malicious attacks. The purpose of security testing of these systems include identifying and removing software flaws that may potentially lead to security violations, and validating the effectiveness of security measures. Simulated security attacks can be performed to find vulnerabilities. </para>
+        </section>
+        <section id="id-754635277829">
+          <title>Testing automation</title>
+          <para id="id6367720">Software testing can be very costly. Automation is a good way to cut down time and cost. Software testing tools and techniques usually suffer from a lack of generic applicability and scalability. The reason is straight-forward. In order to automate the process, we have to have some ways to generate oracles from the specification, and generate test cases to test the target software against the oracles to decide their correctness. Today we still don't have a full-scale system that has achieved this goal. In general, significant amount of human intervention is still needed in testing. The degree of automation remains at the automated test script level. </para>
+          <para id="id6589898">The problem is lessened in reliability testing and performance testing. In robustness testing, the simple specification and oracle: doesn't crash, doesn't hang suffices. Similar simple metrics can also be used in stress testing. </para>
+        </section>
+        <section id="id-462207173693">
+          <title>When to stop testing?</title>
+          <para id="id2943892">Testing is potentially endless. We can not test till all the defects are unearthed and removed - it is simply impossible. At some point, we have to stop testing and ship the software. The question is when. </para>
+          <para id="id8303895">Realistically, testing is a trade-off between budget, time and quality. It is driven by profit models. The pessimistic, and unfortunately most often used approach is to stop testing whenever some, or any of the allocated resources - time, budget, or test cases - are exhausted. The optimistic stopping rule is to stop testing when either reliability meets the requirement, or the benefit from continuing testing cannot justify the testing cost. This will usually require the use of reliability models to evaluate and predict reliability of the software under test. Each evaluation requires repeated running of the following cycle: failure data gathering - modeling - prediction. This method does not fit well for ultra-dependable systems, however, because the real field failure data will take too long to accumulate. </para>
+        </section>
+        <section id="id-221231500871">
+          <title>Alternatives to testing</title>
+          <para id="id6411747">Software testing is more and more considered a problematic method toward better quality. Using testing to locate and correct software defects can be an endless process. Bugs cannot be completely ruled out. Just as the complexity barrier indicates: chances are testing and fixing problems may not necessarily improve the quality and reliability of the software. Sometimes fixing a problem may introduce much more severe problems into the system, happened after bug fixes. </para>
+          <para id="id5962747">Using formal methods to "prove" the correctness of software is also an attracting research direction. But this method can not surmount the complexity barrier either. For relatively simple software, this method works well. It does not scale well to those complex, full-fledged large software systems, which are more error-prone. </para>
+          <para id="id7666856">In a broader view, we may start to question the utmost purpose of testing. Why do we need more effective testing methods anyway, since finding defects and removing them does not necessarily lead to better quality. An analogy of the problem is like the car manufacturing process. In the craftsmanship epoch, we make cars and hack away the problems and defects. But such methods were washed away by the tide of pipelined manufacturing and good quality engineering process, which makes the car defect-free in the manufacturing phase. This indicates that engineering the design process (such as clean-room software engineering) to make the product have less defects may be more effective than engineering the testing process. Testing is used solely for quality monitoring and management, or, "design for testability". This is the leap for software from craftsmanship to engineering.</para>
+        </section>
+      </section>
+    </section>
+    <section id="id-601357658788">
+      <title>Test Techniques</title>
+      <para id="id6654097">One of the aims of testing is to reveal as much potential for failure as possible, and many techniques have been developed to do this, which attempt to “break” the program, by running one or more tests drawn from identified classes of executions deemed equivalent. The leading principle underlying such techniques is to be as systematic as possible in identifying a representative set of program behaviors; for instance, considering subclasses of the input domain, scenarios, states, and dataflow.</para>
+      <para id="id7335968">It is difficult to find a homogeneous basis for classifying all techniques, and the one used here must be seen as a compromise. The classification is based on how tests are generated from the software engineer’s intuition and experience, the specifications, the code structure, the (real or artificial) faults to be discovered, the field usage, or, finally, the nature of the application. Sometimes these techniques are classified as white-box, also called glassbox, if the tests rely on information about how the software has been designed or coded, or as black-box if the test cases rely only on the input/output behavior. One last category deals with combined use of two or more techniques. Obviously, these techniques are not used equally often by all practitioners. Included in the list are those that a software engineer should know. </para>
+      <section id="id-647849801412">
+        <title>Based on the software engineer’s intuition and experience</title>
+        <section id="id-393578871196">
+          <title>Ad hoc testing</title>
+          <para id="id8192321">Perhaps the most widely practiced technique remains ad hoc testing: tests are derived relying on the software engineer’s skill, intuition, and experience with similar programs. Ad hoc testing might be useful for identifying special tests, those not easily captured by formalized techniques.</para>
+        </section>
+        <section id="id-460036051778">
+          <title>Exploratory testing</title>
+          <para id="id5749659">Exploratory testing is defined as simultaneous learning, test design, and test execution; that is, the tests are not defined in advance in an established test plan, but are dynamically designed, executed, and modified. The effectiveness of exploratory testing relies on the software engineer’s knowledge, which can be derived from various sources: observed product behavior during testing, familiarity with the application, the platform, the failure process, the type of possible faults and failures, the risk associated with a particular product, and so on.</para>
+        </section>
+      </section>
+      <section id="id-666085190892">
+        <title>Specification-based techniques</title>
+        <section id="id-83415325547">
+          <title>Equivalence partitioning</title>
+          <para id="id7411143">The input domain is subdivided into a collection of subsets, or equivalent classes, which are deemed equivalent according to a specified relation, and a representative set of tests (sometimes only one) is taken from each class. </para>
+        </section>
+        <section id="id-980375406187">
+          <title>Boundary-value analysis</title>
+          <para id="id3688939">Test cases are chosen on and near the boundaries of the input domain of variables, with the underlying rationale that many faults tend to concentrate near the extreme values of inputs. An extension of this technique is robustness testing, wherein test cases are also chosen outside the input domain of variables, to test program robustness to unexpected or erroneous inputs.</para>
+        </section>
+        <section id="id-907393700674">
+          <title>Decision table</title>
+          <para id="id2943227">Decision tables represent logical relationships between conditions (roughly, inputs) and actions (roughly, outputs). Test cases are systematically derived by considering every possible combination of conditions and actions. A related technique is cause-effect graphing.</para>
+        </section>
+        <section id="id-157634140176">
+          <title>Finite-state machine-based</title>
+          <para id="id3131774">By modeling a program as a finite state machine, tests can be selected in order to cover states and transitions on it.</para>
+        </section>
+        <section id="id-0126873453055">
+          <title>Testing from formal specifications</title>
+          <para id="id6636835">Giving the specifications in a formal language allows for automatic derivation of functional test cases, and, at the same time, provides a reference output, an oracle, for checking test results. Methods exist for deriving test cases from model-based or algebraic specifications.</para>
+        </section>
+        <section id="id-781076421504">
+          <title>Random testing</title>
+          <para id="id6790956">Tests are generated purely at random, not to be confused with statistical testing from the operational profile. This form of testing falls under the heading of the specification-based entry, since at least the input domain must be known, to be able to pick random points within it.</para>
+        </section>
+      </section>
+      <section id="id-305971344265">
+        <title>Code-based techniques</title>
+        <section id="id-922167328542">
+          <title>Control-flow-based criteria</title>
+          <para id="id6257644">Control-flow-based coverage criteria is aimed at covering all the statements or blocks of statements in a program, or specified combinations of them. Several coverage criteria have been proposed, like condition/decision coverage. The strongest of the control-flow-based criteria is path testing, which aims to execute all entry-to-exit control flow paths in the flowgraph. Since path testing is generally not feasible because of loops, other less stringent criteria tend to be used in practice, such as statement testing, branch testing, and condition/decision testing. The adequacy of such tests is measured in percentages; for example, when all branches have been executed at least once by the tests, 100% branch coverage is said to have been achieved.</para>
+        </section>
+        <section id="id-986098097565">
+          <title>Data flow-based criteria</title>
+          <para id="id2942956">In data-flow-based testing, the control flowgraph is annotated with information about how the program variables are defined, used, and killed (undefined). The strongest criterion, all definition-use paths, requires that, for each variable, every control flow path segment from a definition of that variable to a use of that definition is executed. In order to reduce the number of paths required, weaker strategies such as all-definitions and all-uses are employed.</para>
+        </section>
+        <section id="id-315676670682">
+          <title>Reference models for code-based testing </title>
+          <para id="id3334740">Although not a technique in itself, the control structure of a program is graphically represented using a flowgraph in code-based testing techniques. A flowgraph is a directed graph the nodes and arcs of which correspond to program elements. For instance, nodes may represent statements or uninterrupted sequences of statements, and arcs the transfer of control between nodes.</para>
+        </section>
+      </section>
+      <section id="id-0748823273472">
+        <title>Fault-based techniques</title>
+        <para id="id3007671">With different degrees of formalization, fault-based testing techniques devise test cases specifically aimed at revealing categories of likely or predefined faults.</para>
+        <section id="id-0155631010243">
+          <title>Error guessing </title>
+          <para id="id3032125">In error guessing, test cases are specifically designed by software engineers trying to figure out the most plausible faults in a given program. A good source of information is the history of faults discovered in earlier projects, as well as the software engineer’s expertise.</para>
+        </section>
+        <section id="id-422551261368">
+          <title>Mutation testing</title>
+          <para id="id6839359">A mutant is a slightly modified version of the program under test, differing from it by a small, syntactic change. Every test case exercises both the original and all generated mutants: if a test case is successful in identifying the difference between the program and a mutant, the latter is said to be “killed.” Originally conceived as a technique to evaluate a test set, mutation testing is also a testing criterion in itself: either tests are randomly generated until enough mutants have been killed, or tests are specifically designed to kill surviving mutants. In the latter case, mutation testing can also be categorized as a code-based technique. The underlying assumption of mutation testing, the coupling effect, is that by looking for simple syntactic faults, more complex but real faults will be found. For the technique to be effective, a large number of mutants must be automatically derived in a systematic way.</para>
+        </section>
+      </section>
+      <section id="id-761920701128">
+        <title>Usage-based techniques</title>
+        <section id="id-609075058303">
+          <title>Operational profile</title>
+          <para id="id8230725">In testing for reliability evaluation, the test environment must reproduce the operational environment of the software as closely as possible. The idea is to infer, from the observed test results, the future reliability of the software when in actual use. To do this, inputs are assigned a probability distribution, or profile, according to their occurrence in actual operation.</para>
+        </section>
+        <section id="id-290296708148">
+          <title>Software Reliability Engineered Testing</title>
+          <para id="id7290856">Software Reliability Engineered Testing (SRET) is a testing method encompassing the whole development process, whereby testing is “designed and guided by reliability objectives and expected relative usage and criticality of different functions in the field.”</para>
+        </section>
+      </section>
+      <section id="id-595170321811">
+        <title>Techniques based on the nature of the application</title>
+        <para id="id3592528">The above techniques apply to all types of software. However, for some kinds of applications, some additional know-how is required for test derivation. A list of a few specialized testing fields is provided here, based on the nature of the application under test:</para>
+        <list id="id7641767" list-type="bulleted">
+          <item>Object-oriented testing </item>
+          <item>Component-based testing </item>
+          <item>Web-based testing </item>
+          <item>GUI testing </item>
+          <item>Testing of concurrent programs </item>
+          <item>Protocol conformance testing </item>
+          <item>Testing of real-time systems </item>
+          <item>Testing of safety-critical systems (IEEE1228-94) </item>
+        </list>
+      </section>
+      <section id="id-674911002653">
+        <title>Selecting and combining techniques</title>
+        <section id="id-62361945408">
+          <title>Functional and structural </title>
+          <para id="id3712852">Specification-based and code-based test techniques are often contrasted as functional vs. structural testing. These two approaches to test selection are not to be seen as alternative but rather as complementary; in fact, they use different sources of information and have proved to highlight different kinds of problems. They could be used in combination, depending on budgetary considerations.</para>
+        </section>
+        <section id="id-491862052199">
+          <title>Deterministic vs. random </title>
+          <para id="id6561326">Test cases can be selected in a deterministic way, according to one of the various techniques listed, or randomly drawn from some distribution of inputs, such as is usually done in reliability testing. Several analytical and empirical comparisons have been conducted to analyze the conditions that make one approach more effective than the other.</para>
+        </section>
+      </section>
+    </section>
+    <section id="id-460034907514">
+      <title>Test-related measures</title>
+      <para id="id3560410">Sometimes, test techniques are confused with test objectives. Test techniques are to be viewed as aids which help to ensure the achievement of test objectives. For instance, branch coverage is a popular test technique. Achieving a specified branch coverage measure should not be considered the objective of testing per se: it is a means to improve the chances of finding failures by systematically exercising every program branch out of a decision point. To avoid such misunderstandings, a clear distinction should be made between test-related measures, which provide an evaluation of the program under test based on the observed test outputs, and those which evaluate the thoroughness of the test set. </para>
+      <para id="id3028718">Measurement is usually considered instrumental to quality analysis. Measurement may also be used to optimize the planning and execution of the tests. Test management can use several process measures to monitor progress.</para>
+      <section id="id-0741613202055">
+        <title>Evaluation of the program under test (IEEE982.1-98)</title>
+        <section id="id-416360761485">
+          <title>Program measurements to aid in planning and designing testing (IEE982.1-88)</title>
+          <para id="id3086592">Measures based on program size (for example, source lines of code or function points) or on program structure (like complexity) are used to guide testing. Structural measures can also include measurements among program modules in terms of the frequency with which modules call each other.</para>
+        </section>
+        <section id="id-475732447078">
+          <title>Fault types, classification, and statistics (EEE1044-93)</title>
+          <para id="id7300260">The testing literature is rich in classifications and taxonomies of faults. To make testing more effective, it is important to know which types of faults could be found in the software under test, and the relative frequency with which these faults have occurred in the past. This information can be very useful in making quality predictions, as well as for process improvement. </para>
+        </section>
+        <section id="id-856642975888">
+          <title>Fault density (IEEE982.1-88)</title>
+          <para id="id6790960">A program under test can be assessed by counting and classifying the discovered faults by their types. For each fault class, fault density is measured as the ratio between the number of faults found and the size of the program </para>
+        </section>
+        <section id="id-346699272978">
+          <title>Life test, reliability evaluation </title>
+          <para id="id3023743">A statistical estimate of software reliability, which can be obtained by reliability achievement and evaluation, n be used to evaluate a product and decide whether or not testing can be stopped.</para>
+        </section>
+        <section id="id-0888952440284">
+          <title>Reliability growth models</title>
+          <para id="id3755732">Reliability growth models provide a prediction of reliability based on the failures observed under reliability achievement and evaluation They assume, in general, that the faults that caused the observed failures have been fixed (although some models also accept imperfect fixes), and thus, on average, the product’s reliability exhibits an increasing trend. There now exist dozens of published models. Many are laid down on some common assumptions, while others differ. Notably, these models are divided into failure-count and time-between-failure models.</para>
+        </section>
+      </section>
+      <section id="id-169491960321">
+        <title>Evaluation of the tests performed</title>
+        <section id="id-548263953963">
+          <title>Coverage/thoroughness measures (IEEE982.1-88)</title>
+          <para id="id3124763">Several test adequacy criteria require that the test cases systematically exercise a set of elements identified in the program or in the specifications. To evaluate the thoroughness of the executed tests, testers can monitor the elements covered, so that they can dynamically measure the ratio between covered elements and their total number. For example, it is possible to measure the percentage of covered branches in the program flowgraph, or that of the functional requirements exercised among those listed in the specifications document. Code-based adequacy criteria require appropriate instrumentation of the program under test.</para>
+        </section>
+        <section id="id-345543649157">
+          <title>Fault seeding</title>
+          <para id="id3852223">Some faults are artificially introduced into the program before test. When the tests are executed, some of these eeded faults will be revealed, and possibly some faults which were already there will be as well. In theory, depending on which of the artificial faults are discovered, and how many, testing effectiveness can be evaluated, and the remaining number of genuine faults can be estimated. In practice, statisticians question the distribution and representativeness of seeded faults relative to genuine faults and the small sample size on which any extrapolations are based. Some also argue that this technique should be used with great care, since inserting faults into software involves the obvious risk of leaving them there.</para>
+        </section>
+        <section id="id-801211734472">
+          <title>Mutation score</title>
+          <para id="id4157549">In mutation testing, the ratio of killed mutants to the total number of generated mutants can be a measure of the effectiveness of the executed test set.</para>
+        </section>
+        <section id="id-458587199044">
+          <title>Comparison and relative effectiveness of different techniques</title>
+          <para id="id6974976">Several studies have been conducted to compare the relative effectiveness of different test techniques. It is important to be precise as to the property against which the techniques are being assessed; what, for instance, is the exact meaning given to the term “effectiveness”? Possible interpretations are: the number of tests needed to find the first failure, the ratio of the number of faults found through testing to all the faults found during and after testing, or how much reliability was improved. Analytical and empirical comparisons between different techniques have been conducted according to each of the notions of effectiveness specified above.</para>
+        </section>
+      </section>
+    </section>
+    <section id="id-417404705659">
+      <title>Test Process</title>
+      <para id="id7529749">Testing concepts, strategies, techniques, and measures need to be integrated into a defined and controlled process which is run by people. The test process supports testing activities and provides guidance to testing teams, from test planning to test output evaluation, in such a way as to provide justified assurance that the test objectives will be met cost-effectively.</para>
+      <section id="id-221405863045">
+        <title>Practical considerations</title>
+        <section id="id-155036332893">
+          <title>Attitudes/Egoless programming</title>
+          <para id="id2944971">A very important component of successful testing is a collaborative attitude towards testing and quality assurance activities. Managers have a key role in fostering a generally favorable reception towards failure discovery during development and maintenance; for instance, by preventing a mindset of code ownership among programmers, so that they will not feel responsible for failures revealed by their code.</para>
+        </section>
+        <section id="id-0532756844304">
+          <title>Test guides</title>
+          <para id="id6425588">The testing phases could be guided by various aims, for example: in risk-based testing, which uses the product risks to prioritize and focus the test strategy; or in scenario-based testing, in which test cases are defined based on specified software scenarios.</para>
+        </section>
+        <section id="id-0607172027495">
+          <title>Test process management (IEEE1074-97, IEEE12207.0-96:s5.3.9)</title>
+          <para id="id7534861">Test activities conducted at different levels must be organized, together with people, tools, policies, and measurements, into a well-defined process which is an integral part of the life cycle. In IEEE/EIA Standard 12207.0, testing is not described as a stand-alone process, but principles for testing activities are included along with both the five primary life cycle processes and the supporting process. In IEEE Std 1074, testing is grouped with other evaluation activities as integral to the entire life cycle.</para>
+        </section>
+        <section id="id-12083177419">
+          <title>Test documentation and work products (IEEE829-98)</title>
+          <para id="id3753278">Documentation is an integral part of the formalization of the test process. The IEEE Standard for Software Test Documentation (IEEE829-98) provides a good description of test documents and of their relationship with one another and with the testing process. Test documents may include, among others, Test Plan, Test Design Specification, Test Procedure Specification, Test Case Specification, Test Log, and Test Incident or Problem Report. The software under test is documented as the Test Item. Test documentation should be produced and continually updated, to the same level of quality as other types of documentation in software engineering.</para>
+        </section>
+        <section id="id-673375308576">
+          <title>Internal vs. independent test team </title>
+          <para id="id3767053">Formalization of the test process may involve formalizing the test team organization as well. The test team can be composed of internal members (that is, on the project team, involved or not in software construction), of external members, in the hope of bringing in an unbiased, independent perspective, or, finally, of both internal and external members. Considerations of costs, schedule, maturity levels of the involved organizations, and criticality of the application may determine the decision.</para>
+        </section>
+        <section id="id-459142030207">
+          <title>Cost/effort estimation and other process measures (IEEE982.1-88)</title>
+          <para id="id3023684">Several measures related to the resources spent on testing, as well as to the relative fault-finding effectiveness of the various test phases, are used by managers to control and improve the test process. These test measures may cover such aspects as number of test cases specified, number of test cases executed, number of test cases passed, and number of test cases failed, among others. </para>
+          <para id="id7037802">Evaluation of test phase reports can be combined with root-cause analysis to evaluate test process effectiveness in finding faults as early as possible. Such an evaluation could be associated with the analysis of risks. Moreover, the resources that are worth spending on testing should be commensurate with the use/criticality of the application: different techniques have different costs and yield different levels of confidence in product reliability.</para>
+        </section>
+        <section id="id-663484383121">
+          <title>Termination</title>
+          <para id="id4224858">A decision must be made as to how much testing is enough and when a test stage can be terminated. Thoroughness measures, such as achieved code coverage or functional completeness, as well as estimates of fault density or of operational reliability, provide useful support, but are not sufficient in themselves. The decision also involves considerations about the costs and risks incurred by the potential for remaining failures, as opposed to the costs implied by continuing to test. </para>
+        </section>
+        <section id="id-0708487769156">
+          <title>Test reuse and test patterns</title>
+          <para id="id5961881">To carry out testing or maintenance in an organized and cost-effective way, the means used to test each part of the software should be reused systematically. This repository of test materials must be under the control of software configuration management, so that changes to software requirements or design can be reflected in changes to the scope of the tests conducted.</para>
+          <para id="id4628632">The test solutions adopted for testing some application types under certain circumstances, with the motivations behind the decisions taken, form a test pattern which can itself be documented for later reuse in similar projects.</para>
+        </section>
+      </section>
+      <section id="id-0259820175265">
+        <title>Test Activities</title>
+        <para id="id3800034">Under this topic, a brief overview of test activities is given; as often implied by the following description, successful management of test activities strongly depends on the Software Configuration Management process.</para>
+        <section id="id-397458346199">
+          <title>Planning</title>
+          <para id="id3815922">Like any other aspect of project management, testing activities must be planned. Key aspects of test planning include coordination of personnel, management of available test facilities and equipment (which may include magnetic media, test plans and procedures), and planning for possible undesirable outcomes. If more than one baseline of the software is being maintained, then a major planning consideration is the time and effort needed to ensure that the test environment is set to the proper configuration.</para>
+        </section>
+        <section id="id-73525424408">
+          <title>Test-case generation</title>
+          <para id="id6191945">Generation of test cases is based on the level of testing to be performed and the particular testing techniques. Test cases should be under the control of software configuration management and include the expected results for each test.</para>
+        </section>
+        <section id="id-579152857174">
+          <title>Test environment development </title>
+          <para id="id5734424">The environment used for testing should be compatible with the software engineering tools. It should facilitate development and control of test cases, as well as logging and recovery of expected results, scripts, and other testing materials.</para>
+        </section>
+        <section id="id-470792001142">
+          <title>Execution </title>
+          <para id="id6100936">Execution of tests should embody a basic principle of scientific experimentation: everything done during testing should be performed and documented clearly enough that another person could replicate the results. Hence, testing should be performed in accordance with documented procedures using a clearly defined version of the software under test.</para>
+        </section>
+        <section id="id-395747389642">
+          <title>Test results evaluation </title>
+          <para id="id3093303">The results of testing must be evaluated to determine whether or not the test has been successful. In most cases, “successful” means that the software performed as expected and did not have any major unexpected outcomes. Not all unexpected outcomes are necessarily faults, however, but could be judged to be simply noise. Before a failure can be removed, an analysis and debugging effort is needed to isolate, identify, and describe it. When test results are particularly important, a formal review board may be convened to evaluate them.</para>
+        </section>
+        <section id="id-810830033914">
+          <title>Problem reporting/Test log</title>
+          <para id="id8745375">Testing activities can be entered into a test log to identify when a test was conducted, who performed the test, what software configuration was the basis for testing, and other relevant identification information. Unexpected or incorrect test results can be recorded in a problem-reporting system, the data of which form the basis for later debugging and for fixing the problems that were observed as failures during testing. Also, anomalies not classified as faults could be documented in case they later turn out to be more serious than first thought. Test reports are also an input to the change management request process.</para>
+        </section>
+        <section id="id-973608669084">
+          <title>Defect tracking</title>
+          <para id="id7191516">Failures observed during testing are most often due to faults or defects in the software. Such defects can be analyzed to determine when they were introduced into the software, what kind of error caused them to be created (poorly defined requirements, incorrect variable declaration, memory leak, programming syntax error, for example), and when they could have been first observed in the software. Defect-tracking information is used to determine what aspects of software engineering need improvement and how effective previous analyses and testing have been.</para><para id="element-361">References:</para><para id="element-814">http://en.wikipedia.org/wiki/Software_testing,
+http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-171Fall2003/CourseHome/,
+http://www.cs.cornell.edu/courses/cs501/2008sp/,
+http://www.comp.lancs.ac.uk/computing/resources/IanS/SE7/, 
+http://www.ee.unb.ca/kengleha/courses/CMPE3213/IntroToSoftwareEng.htm,
+http://www.cs.kuleuven.ac.be/~dirk/ada-belgium/aia/contents.html#5,
+http://www.softwareqatest.com/qatfaq1.html, etc...</para>
+        </section>
+      </section>
+    </section>
+  </content>
+</document>

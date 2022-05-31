@@ -1,0 +1,207 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Software engineering management</title>
+  <metadata>
+  <md:content-id>m28902</md:content-id><md:title>Software engineering management</md:title>
+  <md:abstract>In this module, we introduce concepts and application of management activities as planning, coordinating, measuring, monitoring, controlling, and reporting to ensure that the development and maintenance of software is systematic, disciplined, and quantified.</md:abstract>
+  <md:uuid>cd24b178-5280-43e6-884b-b3c8290ecb4d</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-190788954001">
+      <title>Introduction</title>
+      <para id="id11257998">Software Engineering Management can be defined as the application of management activities - planning, coordinating, measuring, monitoring, controlling, and reporting - to ensure that the development and maintenance of software is systematic, disciplined, and quantified.</para>
+      <para id="id11528023">The software engineering management therefore addresses the management and measurement of software engineering. While measurement is an important aspect of all topics of software engineering, it is here that the topic of measurement programs is presented.</para>
+      <para id="id10461216">While it is true to say that in one sense it should be possible to manage software engineering in the same way as any other process, there are aspects specific to software products and the software life cycle processes which complicate effective management - just a few of which are as follows:</para>
+      <list id="id11567005" list-type="bulleted">
+        <item>The perception of clients is such that there is often a lack of appreciation for the complexity inherent in software engineering, particularly in relation to the impact of changing requirements. </item>
+        <item>It is almost inevitable that the software engineering processes themselves will generate the need for new or changed client requirements. </item>
+        <item>As a result, software is often built in an iterative process rather than a sequence of closed tasks. </item>
+        <item>Software engineering necessarily incorporates aspects of creativity and discipline—maintaining an appropriate balance between the two is often difficult. </item>
+        <item>The degree of novelty and complexity of software is often extremely high. </item>
+        <item>There is a rapid rate of change in the underlying technology. </item>
+      </list>
+      <para id="id11837162">With respect to software engineering, management activities occur at three levels: organizational and infrastructure management, project management, and measurement program planning and control. </para>
+      <para id="id10396635">Aspects of organizational management are important in terms of their impact on software engineering - on policy management, for instance: organizational policies and standards provide the framework in which software engineering is undertaken. These policies may need to be influenced by the requirements of effective software development and maintenance, and a number of software engineering-specific policies may need to be established for effective management of software engineering at an organizational level. For example, policies are usually necessary to establish specific organization-wide processes or procedures for such software engineering tasks as designing, implementing, estimating, tracking, and reporting. Such policies are essential to effective long-term software engineering management, by establishing a consistent basis on which to analyze past performance and implement improvements, for example.</para>
+      <para id="id11556490">Another important aspect of management is personnel management: policies and procedures for hiring, training, and motivating personnel and mentoring for career development are important not only at the project level but also to the longer-term success of an organization. Software engineering personnel may present unique training or personnel management challenges (for example, maintaining currency in a context where the underlying technology undergoes continuous and rapid change). Communication management is also often mentioned as an overlooked but major aspect of the performance of individuals in a field where precise understanding of user needs and of complex requirements and designs is necessary. Finally, portfolio management, which is the capacity to have an overall vision not only of the set of software under development but also of the software already in use in an organization, is necessary. Furthermore, software reuse is a key factor in maintaining and improving productivity and competitiveness. Effective reuse requires a strategic vision that reflects the unique power and requirements of this technique.</para>
+      <para id="id3059073">Organizational culture and behavior, and functional enterprise management in terms of procurement, supply chain management, marketing, sales, and distribution, all have an influence, albeit indirectly, on an organization’s software engineering process. </para>
+      <para id="id7832576">The Software Engineering Management consists of both the software project management process, in its first five subareas, and software engineering measurement in the last subarea. While these two subjects are often regarded as being separate, and indeed they do possess many unique aspects, their close relationship has led to their combined treatment in software engineering. Unfortunately, a common perception of the software industry is that it delivers products late, over budget, and of poor quality and uncertain functionality. Measurement-informed management - an assumed principle of any true engineering discipline - can help to turn this perception around. In essence, management without measurement, qualitative and quantitative, suggests a lack of rigor, and measurement without management suggests a lack of purpose or context. In the same way, however, management and measurement without expert knowledge is equally ineffectual, so we must be careful to avoid over-emphasizing the quantitative aspects of Software Engineering Management (SEM). Effective management requires a combination of both numbers and experience.</para>
+      <para id="id11732913">The following working definitions are adopted here:</para>
+      <list id="id11893635" list-type="bulleted">
+        <item>Management process refers to the activities that are undertaken in order to ensure that the software engineering processes are performed in a manner consistent with the organization’s policies, goals, and standards. </item>
+        <item>Measurement refers to the assignment of values and labels to aspects of software engineering (products, processes, and resources) and the models that are derived from them, whether these models are developed using statistical, expert knowledge or other techniques. </item>
+        <item>The software engineering project management subareas make extensive use of the software engineering measurement subarea.</item>
+        <item>Software Requirements, where some of the activities to be performed during the Initiation and Scope definition phase of the project are described </item>
+        <item>Software Configuration Management, as this deals with the identification, control, status accounting, and audit of the software configuration along with software release management and delivery </item>
+        <item>Software Engineering Process, because processes and projects are closely related. </item>
+        <item>Software Quality, as quality is constantly a goal of management and is an aim of many activities that must be managed.</item>
+      </list>
+    </section>
+    <section id="id-836368126022">
+      <title>Topics for software engineering management</title>
+      <para id="id11500060">As the Software Engineering Management is viewed here as an organizational process which incorporates the notion of process and project management, we have created a breakdown that is both topic-based and life cycle-based. However, the primary basis for the top-level breakdown is the process of managing a software engineering project. There are six major subareas:</para>
+      <list id="id11294552" list-type="bulleted">
+        <item>Initiation and scope definition, which deals with the decision to initiate a software engineering project </item>
+        <item>Software project planning, which addresses the activities undertaken to prepare for successful software engineering from a management perspective </item>
+        <item>Software project enactment, which deals with generally accepted software engineering management activities that occur during software engineering </item>
+        <item>Review and evaluation, which deal with assurance that the software is satisfactory </item>
+        <item>Closure, which addresses the post-completion activities of a software engineering project </item>
+        <item>Software engineering measurement, which deals with the effective development and implementation of measurement programs in software engineering organizations (IEEE12207.0-96) </item>
+      </list>
+      <section id="id-506379958079">
+        <title>Initiation and Scope Definition</title>
+        <para id="id8027633">The focus of this set of activities is on the effective determination of software requirements via various elicitation methods and the assessment of the project’s feasibility from a variety of standpoints. Once feasibility has been established, the remaining task within this process is the specification of requirements validation and change procedures.</para>
+        <section id="id-368399329399">
+          <title>Determination and Negotiation of Requirements </title>
+          <para id="id2833062">Software requirement methods for requirements elicitation (for example, observation), analysis (for example, data modeling, use-case modeling), specification, and validation (for example, prototyping) must be selected and applied, taking into account the various stakeholder perspectives. This leads to the determination of project scope, objectives, and constraints. This is always an important activity, as it sets the visible boundaries for the set of tasks being undertaken, and is particularly so where the novelty of the undertaking is high. </para>
+        </section>
+        <section id="id-943187442046">
+          <title>Feasibility Analysis </title>
+          <para id="id11562824">Software engineers must be assured that adequate capability and resources are available in the form of people, expertise, facilities, infrastructure, and support (either internally or externally) to ensure that the project can be successfully completed in a timely and cost-effective manner (using, for example, a requirement-capability matrix). This often requires some “ballpark” estimation of effort and cost based on appropriate methods (for example, expert-informed analogy techniques).</para>
+        </section>
+        <section id="id-452371525315">
+          <title>Process for the Review and Revision of Requirements</title>
+          <para id="id11825593">Given the inevitability of change, it is vital that agreement among stakeholders is reached at this early point as to the means by which scope and requirements are to be reviewed and revised (for example, via agreed change management procedures). This clearly implies that scope and requirements will not be “set in stone” but can and should be revisited at predetermined points as the process unfolds (for example, at design reviews, management reviews). If changes are accepted, then some form of traceability analysis and risk analysis should be used to ascertain the impact of those changes. A managed-change approach should also be useful when it comes time to review the outcome of the project, as the scope and requirements should form the basis for the evaluation of success. </para>
+        </section>
+      </section>
+      <section id="id-750881279403">
+        <title>Software Project Planning</title>
+        <para id="id11658591">The iterative planning process is informed by the scope and requirements and by the establishment of feasibility. At this point, software life cycle processes are evaluated and the most appropriate (given the nature of the project, its degree of novelty, its functional and technical complexity, its quality requirements, and so on) is selected. Where relevant, the project itself is then planned in the form of a hierarchical decomposition of tasks, the associated deliverables of each task are specified and characterized in terms of quality and other attributes in line with stated requirements, and detailed effort, schedule, and cost estimation is undertaken. Resources are then allocated to tasks so as to optimize personnel productivity (at individual, team, and organizational levels), equipment and materials utilization, and adherence to schedule. Detailed risk management is undertaken and the “risk profile” of the project is discussed among, and accepted by, all relevant stakeholders. Comprehensive software quality management processes are determined as part of the planning process in the form of procedures and responsibilities for software quality assurance, verification and validation, reviews, and audits. As an iterative process, it is vital that the processes and responsibilities for ongoing plan management, review, and revision are also clearly stated and agreed.</para>
+        <section id="id-308890666661">
+          <title>Process Planning</title>
+          <para id="id12069798">Selection of the appropriate software life cycle model (for example, spiral, evolutionary prototyping) and the adaptation and deployment of appropriate software life cycle processes are undertaken in light of the particular scope and requirements of the project. Relevant methods and tools are also selected. At the project level, appropriate methods and tools are used to decompose the project into tasks, with associated inputs, outputs, and completion conditions (for example, work breakdown structure). This in turn influences decisions on the project’s high-level schedule and organization structure.</para>
+        </section>
+        <section id="id-0314041877568">
+          <title>Determine Deliverables</title>
+          <para id="id11381961">The product(s) of each task (for example, architectural design, inspection report) are specified and characterized. Opportunities to reuse software components from previous developments or to utilize off-the-shelf software products are evaluated. Use of third parties and procured software are planned and suppliers are selected.</para>
+        </section>
+        <section id="id-130075549762">
+          <title>Effort, Schedule, and Cost Estimation</title>
+          <para id="id3902125">Based on the breakdown of tasks, inputs, and outputs, the expected effort range required for each task is determined using a calibrated estimation model based on historical size-effort data where available and relevant, or other methods like expert judgment. Task dependencies are established and potential bottlenecks are identified using suitable methods (for example, critical path analysis). Bottlenecks are resolved where possible, and the expected schedule of tasks with projected start times, durations, and end times is produced. Resource requirements (people, tools) are translated into cost estimates. This is a highly iterative activity which must be negotiated and revised until consensus is reached among affected stakeholders (primarily engineering and management).</para>
+        </section>
+        <section id="id-622401415521">
+          <title>Resource Allocation</title>
+          <para id="id11330631">Equipment, facilities, and people are associated with the scheduled tasks, including the allocation of responsibilities for completion. This activity is informed and constrained by the availability of resources and their optimal use under these circumstances, as well as by issues relating to personnel (for example, productivity of individuals/teams, team dynamics, organizational and team structures).</para>
+        </section>
+        <section id="id-120776963107">
+          <title>Risk Management</title>
+          <para id="id10494298">Risk identification and analysis (what can go wrong, how and why, and what are the likely consequences), critical risk assessment (which are the most significant risks in terms of exposure, which can we do something about in terms of leverage), risk mitigation and contingency planning (formulating a strategy to deal with risks and to manage the risk profile) are all undertaken. Risk assessment methods (for example, decision trees and process simulations) should be used in order to highlight and evaluate risks. Project abandonment policies should also be determined at this point in discussion with all other stakeholders. Software-unique aspects of risk, such as software engineers’ tendency to add unwanted features or the risks attendant in software’s intangible nature, must influence the project’s risk management. </para>
+        </section>
+        <section id="id-255994002932">
+          <title>Quality Management</title>
+          <para id="id11572393">Quality is defined in terms of pertinent attributes of the specific project and any associated product(s), perhaps in both quantitative and qualitative terms. These quality characteristics will have been determined in the specification of detailed software requirements. </para>
+          <para id="id11207415">Thresholds for adherence to quality are set for each indicator as appropriate to stakeholder expectations for the software at hand. Procedures relating to ongoing SQA throughout the process and for product (deliverable) verification and validation are also specified at this stage (for example, technical reviews and inspections).</para>
+        </section>
+        <section id="id-585162041144">
+          <title>Plan Management</title>
+          <para id="id11391432">How the project will be managed and how the plan will be managed must also be planned. Reporting, monitoring, and control of the project must fit the selected software engineering process and the realities of the project, and must be reflected in the various artifacts that will be used for managing it. But, in an environment where change is an expectation rather than a shock, it is vital that plans are themselves managed. This requires that adherence to plans be systematically directed, monitored, reviewed, reported, and, where appropriate, revised. Plans associated with other management-oriented support processes (for example, documentation, software configuration management, and problem resolution) also need to be managed in the same manner.</para>
+        </section>
+      </section>
+      <section id="id-509232704245">
+        <title>Software Project Enactment</title>
+        <para id="id11932323">The plans are then implemented, and the processes embodied in the plans are enacted. Throughout, there is a focus on adherence to the plans, with an overriding expectation that such adherence will lead to the successful satisfaction of stakeholder requirements and achievement of the project objectives. Fundamental to enactment are the ongoing management activities of measuring, monitoring, controlling, and reporting. </para>
+        <section id="id-0649836538869">
+          <title>Implementation of Plans</title>
+          <para id="id11047578">The project is initiated and the project activities are undertaken according to the schedule. In the process, resources are utilized (for example, personnel effort, funding) and deliverables are produced (for example, architectural design documents, test cases). </para>
+        </section>
+        <section id="id-57179870536">
+          <title>Supplier Contract Management</title>
+          <para id="id9898219">Prepare and execute agreements with suppliers, monitor supplier performance, and accept supplier products, incorporating them as appropriate.</para>
+        </section>
+        <section id="id-197188581412">
+          <title>Implementation of measurement process</title>
+          <para id="id11232901">The measurement process is enacted alongside the software project, ensuring that relevant and useful data are collected.</para>
+        </section>
+        <section id="id-349019038189">
+          <title>Monitor Process</title>
+          <para id="id10290938">Adherence to the various plans is assessed continually and at predetermined intervals. Outputs and completion conditions for each task are analyzed. Deliverables are evaluated in terms of their required characteristics (for example, via reviews and audits). Effort expenditure, schedule adherence, and costs to date are investigated, and resource usage is examined. The project risk profile is revisited, and adherence to quality requirements is evaluated.</para>
+          <para id="id10302306">Measurement data are modeled and analyzed. Variance analysis based on the deviation of actual from expected outcomes and values is undertaken. This may be in the form of cost overruns, schedule slippage, and the like. Outlier identification and analysis of quality and other measurement data are performed (for example, defect density analysis). Risk exposure and leverage are recalculated, and decisions trees, simulations, and so on are rerun in the light of new data. These activities enable problem detection and exception identification based on exceeded thresholds. Outcomes are reported as needed and certainly where acceptable thresholds are surpassed.</para>
+        </section>
+        <section id="id-632570690218">
+          <title>Control Process</title>
+          <para id="id11994312">The outcomes of the process monitoring activities provide the basis on which action decisions are taken. Where appropriate, and where the impact and associated risks are modeled and managed, changes can be made to the project. This may take the form of corrective action (for example, retesting certain components), it may involve the incorporation of contingencies so that similar occurrences are avoided (for example, the decision to use prototyping to assist in software requirements validation), and/or it may entail the revision of the various plans and other project documents (for example, requirements specification) to accommodate the unexpected outcomes and their implications.</para>
+        </section>
+        <section id="id-224288769718">
+          <title>Reporting</title>
+          <para id="id11726865">At specified and agreed periods, adherence to the plans is reported, both within the organization (for example to the project portfolio steering committee) and to external stakeholders (for example, clients, users). Reports of this nature should focus on overall adherence as opposed to the detailed reporting required frequently within the project team.</para>
+        </section>
+      </section>
+      <section id="id-0685887724064">
+        <title>Review and Evaluation</title>
+        <para id="id10514391">At critical points in the project, overall progress towards achievement of the stated objectives and satisfaction of stakeholder requirements are evaluated. Similarly, assessments of the effectiveness of the overall process to date, the personnel involved, and the tools and methods employed are also undertaken at particular milestones.</para>
+        <section id="id-496598990826">
+          <title>Determining Satisfaction of Requirements</title>
+          <para id="id11464308">Since attaining stakeholder (user and customer) satisfaction is one of our principal aims, it is important that progress towards this aim be formally and periodically assessed. This occurs on achievement of major project milestones (for example, confirmation of software design architecture, software integration technical review). Variances from expectations are identified and appropriate action is taken. </para>
+        </section>
+        <section id="id-063238255519">
+          <title>Reviewing and Evaluating Performance</title>
+          <para id="id11364180">Periodic performance reviews for project personnel provide insights as to the likelihood of adherence to plans as well as possible areas of difficulty (for example, team member conflicts). The various methods, tools, and techniques employed are evaluated for their effectiveness and appropriateness, and the process itself is systematically and periodically assessed for its relevance, utility, and efficacy in the project context. Where appropriate, changes are made and managed.</para>
+        </section>
+      </section>
+      <section id="id-0934248861883">
+        <title>Closure</title>
+        <para id="id11324738">The project reaches closure when all the plans and embodied processes have been enacted and completed. At this stage, the criteria for project success are revisited. Once closure is established, archival, post mortem, and process improvement activities are performed. </para>
+        <section id="id-281146099326">
+          <title>Determining Closure </title>
+          <para id="id11482384">The tasks as specified in the plans are complete, and satisfactory achievement of completion criteria is confirmed. All planned products have been delivered with acceptable characteristics. Requirements are checked off and confirmed as satisfied, and the objectives of the project have been achieved. These processes generally involve all stakeholders and result in the documentation of client acceptance and any remaining known problem reports.</para>
+        </section>
+        <section id="id-676424196627">
+          <title>Closure Activities</title>
+          <para id="id10952836">After closure has been confirmed, archival of project materials takes place in line with stakeholder-agreed methods, location, and duration. The organization’s measurement database is updated with final project data and post-project analyses are undertaken. A project post mortem is undertaken so that issues, problems, and opportunities encountered during the process are analyzed, and lessons are drawn from the process and fed into organizational learning and improvement .</para>
+        </section>
+      </section>
+    </section>
+    <section id="id-414815666165">
+      <title>Software Engineering Measurement</title>
+      <para id="id10939901">The importance of measurement and its role in better management practices is widely acknowledged, and so its importance can only increase in the coming years. Effective measurement has become one of the cornerstones of organizational maturity.</para>
+      <para id="id11481073">Key terms on software measures and measurement methods have been defined in ISO15939 on the basis of the ISO international vocabulary of metrology ISO93. Nevertheless, readers will encounter terminology differences in the literature; for example, the term “metrics” is sometimes used in place of “measures.”</para>
+      <para id="id2823981">This topic follows the international standard ISO/IEC 15939, which describes a process which defines the activities and tasks necessary to implement a software measurement process and includes, as well, a measurement information model.</para>
+      <section id="id-524606482295">
+        <title>Establish and Sustain Measurement Commitment</title>
+        <list id="id10914857" list-type="bulleted">
+          <item>Accept requirements for measurement. Each measurement endeavor should be guided by organizational objectives and driven by a set of measurement requirements established by the organization and the project. For example, an organizational objective might be “first-to-market with new products”. This in turn might engender a requirement that factors contributing to this objective be measured so that projects might be managed to meet this objective. </item>
+          <item>Define scope of measurement. The organizational unit to which each measurement requirement is to be applied must be established. This may consist of a functional area, a single project, a single site, or even the whole enterprise. All subsequent measurement tasks related to this requirement should be within the defined scope. In addition, the stakeholders should be identified. </item>
+          <item>Commitment of management and staff to measurement. The commitment must be formally established, communicated, and supported by resources (see next item). </item>
+          <item>Commit resources for measurement. The organization’s commitment to measurement is an essential factor for success, as evidenced by assignment of resources for implementing the measurement process. Assigning resources includes allocation of responsibility for the various tasks of the measurement process (such as user, analyst, and librarian) and providing adequate funding, training, tools, and support to conduct the process in an enduring fashion. </item>
+        </list>
+      </section>
+      <section id="id-702939426374">
+        <title>Plan the Measurement Process</title>
+        <list id="id6594480" list-type="bulleted">
+          <item>Characterize the organizational unit. The organizational unit provides the context for measurement, so it is important to make this context explicit and to articulate the assumptions that it embodies and the constraints that it imposes. Characterization can be in terms of organizational processes, application domains, technology, and organizational interfaces. An organizational process model is also typically an element of the organizational unit characterization. </item>
+          <item>Identify information needs. Information needs are based on the goals, constraints, risks, and problems of the organizational unit. They may be derived from business, organizational, regulatory, and/or product objectives. They must be identified and prioritized. Then, a subset to be addressed must be selected and the results documented, communicated, and reviewed by stakeholders. </item>
+          <item>Select measures. Candidate measures must be selected, with clear links to the information needs. Measures must then be selected based on the priorities of the information needs and other criteria such as cost of collection, degree of process disruption during collection, ease of analysis, ease of obtaining accurate, consistent data.</item>
+          <item>Define data collection, analysis, and reporting procedures. This encompasses collection procedures and schedules, storage, verification, analysis, reporting, and configuration management of data. </item>
+          <item>Define criteria for evaluating the information products. Criteria for evaluation are influenced by the technical and business objectives of the organizational unit. Information products include those associated with the product being produced, as well as those associated with the processes being used to manage and measure the project. </item>
+          <item>Review, approve, and provide resources for measurement tasks. </item>
+          <item>The measurement plan must be reviewed and approved by the appropriate stakeholders. This includes all data collection procedures, storage, analysis, and reporting procedures; evaluation criteria; schedules; and responsibilities. Criteria for reviewing these artifacts should have been established at the organizational unit level or higher and should be used as the basis for these reviews. Such criteria should take into consideration previous experience, availability of resources, and potential disruptions to projects when changes from current practices are proposed. </item>
+          <item>Resources should be made available for implementing the planned and approved measurement tasks. Resource availability may be staged in cases where changes are to be piloted before widespread deployment. Consideration should be paid to the resources necessary for successful deployment of new procedures or measures. </item>
+          <item>Acquire and deploy supporting technologies. This includes evaluation of available supporting technologies, selection of the most appropriate technologies, acquisition of those technologies, and deployment of those technologies. </item>
+        </list>
+      </section>
+      <section id="id-10977386968">
+        <title>Perform the Measurement Process</title>
+        <list id="id11345766" list-type="bulleted">
+          <item>Integrate measurement procedures with relevant processes. The measurement procedures, such as data collection, must be integrated into the processes they are measuring. This may involve changing current processes to accommodate data collection or generation activities. It may also involve analysis of current processes to minimize additional effort and evaluation of the effect on employees to ensure that the measurement procedures will be accepted. Morale issues and other human factors need to be considered. In addition, the measurement procedures must be communicated to those providing the data, training may need to be provided, and support must typically be provided. Data analysis and reporting procedures must typically be integrated into organizational and/or project processes in a similar manner. </item>
+          <item>Collect data. The data must be collected, verified, and stored. </item>
+          <item>Analyze data and develop information products. Data may be aggregated, transformed, or recoded as part of the analysis process, using a degree of rigor appropriate to the nature of the data and the information needs. The results of this analysis are typically indicators such as graphs, numbers, or other indications that must be interpreted, resulting in initial conclusions to be presented to stakeholders. The results and conclusions must be reviewed, using a process defined by the organization (which may be formal or informal). Data providers and measurement users should participate in reviewing the data to ensure that they are meaningful and accurate, and that they can result in reasonable actions. </item>
+          <item>Communicate results. Information products must be documented and communicated to users and stakeholders. </item>
+        </list>
+      </section>
+      <section id="id-129295013799">
+        <title>Evaluate Measurement</title>
+        <list id="id11843424" list-type="bulleted">
+          <item>Evaluate information products. Evaluate information products against specified evaluation criteria and determine strengths and weaknesses of the information products. This may be performed by an internal process or an external audit and should include feedback from measurement users. Record lessons learned in an appropriate database. </item>
+          <item>Evaluate the measurement process. Evaluate the measurement process against specified evaluation criteria and determine the strengths and weaknesses of the process. This may be performed by an internal process or an external audit and should include feedback from measurement users.</item>
+          <item>Identify potential improvements. Such improvements may be changes in the format of indicators, changes in units measured, or reclassification of categories. Determine the costs and benefits of potential improvements and select appropriate improvement actions. Communicate proposed improvements to the measurement process owner and stakeholders for review and approval. Also communicate lack of potential improvements if the analysis fails to identify improvements. </item>
+        </list><para id="element-408">References:</para><para id="element-24">http://en.wikipedia.org/wiki/Software_engineering,
+http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-171Fall2003/CourseHome/,
+http://www.cs.cornell.edu/courses/cs501/2008sp/,
+http://www.comp.lancs.ac.uk/computing/resources/IanS/SE7/, 
+http://www.ee.unb.ca/kengleha/courses/CMPE3213/IntroToSoftwareEng.htm,
+http://cs.wwc.edu/~aabyan/435/Management.html, 
+http://www.sei.cmu.edu/programs/sepm/, etc...
+</para>
+      </section>
+    </section>
+  </content>
+</document>

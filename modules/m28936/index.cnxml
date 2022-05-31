@@ -1,0 +1,203 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Software Design</title>
+  <metadata>
+  <md:content-id>m28936</md:content-id><md:title>Software Design</md:title>
+  <md:abstract>This module provides an introduction to the principles and concepts relevant to the software design. It examines the role and context of the design activity as a form of problem-solving process, describes how this is supported by current design methods, and considers the strategies, strengths, limitations, and main domains of application of these methods.</md:abstract>
+  <md:uuid>8353d7dc-b4f5-433c-94e6-cf82ae33d341</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-713988174107">
+      <title>Introduction</title>
+      <para id="id5144624">Software design is a process of defining the architecture, components, interfaces, and other characteristics of a system or component and planning for a software solution. After the purpose and specifications of software is determined, software developers will design or employ designers to develop a plan for a solution.</para>
+      <para id="id5144633">A software design may be platform-independent or platform-specific, depending on the availability of the technology called for by the design.</para>
+      <para id="id5144640">Viewed as a process, software design is the software engineering life cycle activity in which software requirements are analyzed in order to produce a description of the software’s internal structure that will serve as the basis for its construction. More precisely, a software design (the result) must describe the software architecture and the interfaces between those components. It must also describe the components at a level of detail that enable their construction.</para>
+      <para id="id5144660">Software design plays an important role in developing software: it allows software engineers to produce various models that form a kind of blueprint of the solution to be implemented. We can analyze and evaluate these models to determine whether or not they will allow us to fulfill the various requirements. We can also examine and evaluate various alternative solutions and trade-offs. Finally, we can use the resulting models to plan the subsequent development activities, in addition to using them as input and the starting point of construction and testing.</para>
+      <para id="id5144674">In a standard listing of software life cycle processes such as IEEE/EIA 12207 Software Life Cycle Processes, software design consists of two activities that fit between software requirements analysis and software construction:</para>
+      <list id="id5144682" list-type="bulleted">
+        <item>Software architectural design (sometimes called top-level design): describing software’s top-level structure and organization and identifying the various components. </item>
+        <item>Software detailed design: describing each component sufficiently to allow for its construction. </item>
+      </list>
+      
+      
+    </section>
+    <section id="id-464410598166">
+      <title>Concepts of software design</title>
+      <para id="id5144729">The concepts, notions, and terminology introduced here form an underlying basis for understanding the role and scope of software design.</para>
+      <section id="id-8578505658">
+        <title>General Design Concepts</title>
+        <para id="id5144742">Software is not the only field where design is involved. In the general sense, we can view design as a form of problem-solving. For example, the concept of a wicked problem–a problem with no definitive solution–is interesting in terms of understanding the limits of design. A number of other notions and concepts are also of interest in understanding design in its general sense: goals, constraints, alternatives, representations, and solutions.</para>
+      </section>
+      <section id="id-976230614482">
+        <title>Context of Software Design</title>
+        <para id="id5144769">To understand the role of software design, it is important to understand the context in which it fits, the software engineering life cycle. Thus, it is important to understand the major characteristics of software requirements analysis vs. software design vs. software construction vs. software testing.</para>
+      </section>
+      <section id="id-952539925736">
+        <title>Software Design Process</title>
+        <para id="id5144786">Software design is generally considered a two-step process: </para>
+        <section id="id-558671662382">
+          <title>Architectural design</title>
+          <para id="id5144798">Architectural design describes how software is decomposed and organized into components (the software architecture). </para>
+        </section>
+        <section id="id-908394114399">
+          <title>Detailed design </title>
+          <para id="id5144812">Detailed design describes the specific behavior of these components. The output of this process is a set of models and artifacts that record the major decisions that have been taken.</para>
+        </section>
+      </section>
+      <section id="id-283592860594">
+        <title>Enabling Techniques</title>
+        <para id="id5144828">According to the Oxford English Dictionary, a principle is “a basic truth or a general law … that is used as a basis of reasoning or a guide to action”. Software design principles, also called enabling techniques, are key notions considered fundamental to many different software design approaches and concepts.</para>
+        <section id="id-354358497346">
+          <title>Abstraction</title>
+          <para id="id5155834">Abstraction is “the process of forgetting information so that things that are different can be treated as if they were the same”. In the context of software design, two key abstraction mechanisms are parameterization and specification. Abstraction by specification leads to three major kinds of abstraction: procedural abstraction, data abstraction, and control (iteration) abstraction.</para>
+        </section>
+        <section id="id-00335588519027">
+          <title>Coupling and cohesion</title>
+          <para id="id5155857">Coupling is defined as the strength of the relationships between modules, whereas cohesion is defined by how the elements making up a module are related.</para>
+        </section>
+        <section id="id-0743915440326">
+          <title>Decomposition and modularization</title>
+          <para id="id5155872">Decomposing and modularizing large software into a number of smaller independent ones, usually with the goal of placing different functionalities or responsibilities in different components.</para>
+        </section>
+        <section id="id-595514961283">
+          <title>Encapsulation/information hiding</title>
+          <para id="id5155887">Encapsulation/information hiding means grouping and packaging the elements and internal details of an abstraction and making those details inaccessible.</para>
+        </section>
+        <section id="id-902817185308">
+          <title>Separation of interface and implementation</title>
+          <para id="id5155901">Separating interface and implementation involves defining a component by specifying a public interface, known to the clients, separate from the details of how the component is realized.</para>
+        </section>
+        <section id="id-167509286305">
+          <title>Sufficiency, completeness and primitiveness</title>
+          <para id="id5155916">Achieving sufficiency, completeness, and primitiveness means ensuring that a software component captures all the important characteristics of an abstraction, and nothing more.</para>
+          <figure id="id5155928"><media id="id1170021630562" alt=""><image src="../../media/graphics1-641a.png" mime-type="image/png" height="302" width="600"/></media>
+        <caption>Breakdown of topics for the Software Design</caption></figure>
+        </section>
+      </section>
+    </section>
+    <section id="id-198361001769">
+      <title>Software Structure and Architecture</title>
+      <para id="id5155961">In its strict sense, a software architecture is “a description of the subsystems and components of a software system and the relationships between them”. Architecture thus attempts to define the internal structure -according to the Oxford English Dictionary, “the way in which something is constructed or organized” - of the resulting software. During the mid-1990s, however, software architecture started to emerge as a broader discipline involving the study of software structures and architectures in a more generic way. This gave rise to a number of interesting ideas about software design at different levels of abstraction. Some of these concepts can be useful during the architectural design (for example, architectural style) of specific software, as well as during its detailed design (for example, lower-level design patterns). But they can also be useful for designing generic systems, leading to the design of families of programs (also known as product lines). Interestingly, most of these concepts can be seen as attempts to describe, and thus reuse, generic design knowledge.</para>
+      <section id="id-709047192068">
+        <title>Architectural Structures and Viewpoints</title>
+        <para id="id5156005">Different high-level facets of a software design can and should be described and documented. These facets are often called views: “A view represents a partial aspect of a software architecture that shows specific properties of a software system”. These distinct views pertain to distinct issues associated with software design - for example, the logical view (satisfying the functional requirements) vs. the process view (concurrency issues) vs. the physical view (distribution issues) vs. the development view (how the design is broken down into implementation units). Other authors use different terminologies, like behavioral vs. functional vs. structural vs. data modeling views. In summary, a software design is a multi-faceted artifact produced by the design process and generally composed of relatively independent and orthogonal views.</para>
+        <para id="id5156024">An architectural style is “a set of constraints on an architecture [that] defines a set or family of architectures that satisfies them”. An architectural style can thus be seen as a meta-model which can provide software’s high-level organization (its macroarchitecture).</para>
+        <list id="id5156038" list-type="bulleted">
+          <item>General structure (for example, layers, pipes, and filters, blackboard) </item>
+          <item>Distributed systems (for example, client-server, threetiers, broker) </item>
+          <item>Interactive systems (for example, Model-View-Controller, Presentation-Abstraction-Control) </item>
+          <item>Adaptable systems (for example, micro-kernel, reflection) </item>
+          <item>Others (for example, batch, interpreters, process control, rule-based). </item>
+        </list>
+      </section>
+      <section id="id-425577600091">
+        <title>Design Patterns</title>
+        <para id="id5156082">Succinctly described, a pattern is “a common solution to a common problem in a given context.” While architectural styles can be viewed as patterns describing the high-level organization of software (their macroarchitecture), other design patterns can be used to describe details at a lower, more local level (their microarchitecture). </para>
+        <list id="id5156097" list-type="bulleted">
+          <item>Creational patterns (example: builder, factory, prototype, and singleton) </item>
+          <item>Structural patterns (example: adapter, bridge, composite, decorator, façade, flyweight, and proxy) </item>
+          <item>Behavioral patterns (example: command, interpreter, iterator, mediator, memento, observer, state, strategy, template, visitor) </item>
+        </list>
+      </section>
+      <section id="id-645998027049">
+        <title>Families of Programs and Frameworks</title>
+        <para id="id5156131">One possible approach to allow the reuse of software designs and components is to design families of software, also known as software product lines. This can be done by identifying the commonalities among members of such families and by using reusable and customizable components to account for the variability among family members.</para>
+        <para id="id5156141">In OO programming, a key related notion is that of the framework: a partially complete software subsystem that can be extended by appropriately instantiating specific plug-ins (also known as hot spots).</para>
+      </section>
+      <section id="id-207595846055">
+        <title>Software Design Quality Analysis and Evaluation</title>
+        <para id="id5156157">This section includes a number of quality and evaluation topics that are specifically related to software design.</para>
+        <section id="id-514753075028">
+          <title>Quality Attributes</title>
+          <para id="id5156171">Various attributes are generally considered important for obtaining a software design of good quality - various “ilities” (maintainability, portability, testability, traceability), various “nesses” (correctness, robustness), including “fitness of purpose”.</para>
+          <para id="id5156184">An interesting distinction is the one between quality attributes discernable at run-time (performance, security, availability, functionality, usability), those not discernable at run-time (modifiability, portability, reusability, integrability, and testability), and those related to the architecture’s intrinsic qualities (conceptual integrity, correctness, and completeness, buildability).</para>
+        </section>
+        <section id="id-523841741477">
+          <title>Quality Analysis and Evaluation Techniques</title>
+          <para id="id5156210">Various tools and techniques can help ensure a software design’s quality.</para>
+          <list id="id5156217" list-type="bulleted">
+            <item>Software design reviews: informal or semiformal, often group-based, techniques to verify and ensure the quality of design artifacts. </item>
+            <item>Static analysis: formal or semiformal static (non-executable) analysis that can be used to evaluate a design (for example, fault-tree analysis or automated cross-checking). </item>
+            <item>Simulation and prototyping: dynamic techniques to evaluate a design (for example, performance simulation or feasibility prototype.</item>
+          </list>
+        </section>
+        <section id="id-283040004116">
+          <title>Measures</title>
+          <para id="id5156252">Measures can be used to assess or to quantitatively estimate various aspects of a software design’s size, structure, or quality. Most measures that have been proposed generally depend on the approach used for producing the design. These measures are classified in two broad categories:</para>
+          <list id="id5156266" list-type="bulleted">
+            <item>Function-oriented (structured) design measures: the design’s structure, obtained mostly through functional decomposition; generally represented as a structure chart (sometimes called a hierarchical diagram) on which various measures can be computed. </item>
+            <item>Object-oriented design measures: the design’s overall structure is often represented as a class diagram, on which various measures can be computed. Measures on the properties of each class’s internal content can also be computed.</item>
+          </list>
+        </section>
+      </section>
+    </section>
+    <section id="id-414312242737">
+      <title>Software Design Notations</title>
+      <para id="id5156306">Many notations and languages exist to represent software design artifacts. Some are used mainly to describe a design’s structural organization, others to represent software behavior. Certain notations are used mostly during architectural design and others mainly during detailed design, although some notations can be used in both steps. In addition, some notations are used mostly in the context of specific. Here, they are categorized into notations for describing the structural (static) view vs. the behavioral (dynamic) view.</para>
+      <section id="id-930187544799">
+        <title>Structural Descriptions (static view)</title>
+        <para id="id5156332">The following notations, mostly (but not always) graphical, describe and represent the structural aspects of a software design - that is, they describe the major components and how they are interconnected (static view):</para>
+        <list id="id5156340" list-type="bulleted">
+          <item>Architecture description languages (ADLs): textual, often formal, languages used to describe a software architecture in terms of components and connectors.</item>
+          <item>Class and object diagrams: used to represent a set of classes (and objects) and their interrelationships.</item>
+          <item>Component diagrams: used to represent a set of components (“physical and replaceable part[s] of a system that [conform] to and [provide] the realization of a set of interfaces”) and their interrelationships. </item>
+          <item>Class responsibility collaborator cards (CRCs): used to denote the names of components (class), their responsibilities, and their collaborating components’ names.</item>
+          <item>Deployment diagrams: used to represent a set of (physical) nodes and their interrelationships, and, thus, to model the physical aspects of a system. </item>
+          <item>Entity-relationship diagrams (ERDs): used to represent conceptual models of data stored in information systems.</item>
+          <item>Interface description languages (IDLs): programming-like languages used to define the interfaces (names and types of exported operations) of software components. </item>
+          <item>Jackson structure diagrams: used to describe the data structures in terms of sequence, selection, and iteration.</item>
+          <item>Structure charts: used to describe the calling structure of programs (which module calls, and is called by, which other module).</item>
+        </list>
+      </section>
+      <section id="id-884663960224">
+        <title>Behavioral Descriptions (dynamic view)</title>
+        <para id="id5156427">The following notations and languages, some graphical and some textual, are used to describe the dynamic behavior of software and components. Many of these notations are useful mostly, but not exclusively, during detailed design.</para>
+        <list id="id5156436" list-type="bulleted">
+          <item>Activity diagrams: used to show the control flow from activity (“ongoing non-atomic execution within a state machine”) to activity. </item>
+          <item>Collaboration diagrams: used to show the interactions that occur among a group of objects, where the emphasis is on the objects, their links, and the messages they exchange on these links.</item>
+          <item>Data flow diagrams (DFDs): used to show data flow among a set of processes.</item>
+          <item>Decision tables and diagrams: used to represent complex combinations of conditions and actions.</item>
+          <item>Flowcharts and structured flowcharts: used to represent the flow of control and the associated actions to be performed. </item>
+          <item>Sequence diagrams: used to show the interactions among a group of objects, with emphasis on the time-ordering of messages. </item>
+          <item>State transition and state-chart diagrams: used to show the control flow from state to state in a state machine.</item>
+          <item>Formal specification languages: textual languages that use basic notions from mathematics (for example, logic, set, sequence) to rigorously and abstractly define software component interfaces and behavior, often in terms of pre- and post-conditions.</item>
+          <item>Pseudocode and program design languages (PDLs): structured-programming-like languages used to describe, generally at the detailed design stage, the behavior of a procedure or method.</item>
+        </list>
+      </section>
+    </section>
+    <section id="id-44605746852">
+      <title>Software Design Strategies and Methods</title>
+      <para id="id5156520">There exist various general strategies to help guide the design process. In contrast with general strategies, methods are more specific in that they generally suggest and provide a set of notations to be used with the method, a description of the process to be used when following the method and a set of guidelines in using the method. Such methods are useful as a means of transferring knowledge and as a common framework for teams of software engineers. </para>
+      <section id="id-588557334148">
+        <title>General Strategies</title>
+        <para id="id5156539">Some often-cited examples of general strategies useful in the design process are divide-and-conquer and stepwise refinement, top-down vs. bottom-up strategies, data abstraction and information hiding, use of heuristics, use of patterns and pattern languages, use of an iterative and incremental approach.</para>
+      </section>
+      <section id="id-389581319196">
+        <title>Function-Oriented (Structured) Design</title>
+        <para id="id5156557">This is one of the classical methods of software design, where decomposition centers on identifying the major software functions and then elaborating and refining them in a top-down manner. Structured design is generally used after structured analysis, thus producing, among other things, data flow diagrams and associated process descriptions. Researchers have proposed various strategies (for example, transformation analysis, transaction analysis) and heuristics (for example, fan-in/fan-out, scope of effect vs. scope of control) to transform a DFD into a software architecture generally represented as a structure chart.</para>
+      </section>
+      <section id="id-609925134543">
+        <title>Object-Oriented Design</title>
+        <para id="id5156580">Numerous software design methods based on objects have been proposed. The field has evolved from the early object-based design of the mid-1980s (noun = object; verb = method; adjective = attribute) through OO design, where inheritance and polymorphism play a key role, to the field of component-based design, where meta-information can be defined and accessed (through reflection, for example). Although OO design’s roots stem from the concept of data abstraction, responsibility-driven design has also been proposed as an alternative approach to OO design.</para>
+      </section>
+      <section id="id-113023800447">
+        <title>Data-Structure-Centered Design </title>
+        <para id="id5156610">Data-structure-centered design (for example, Jackson, Warnier-Orr) starts from the data structures a program manipulates rather than from the function it performs. The software engineer first describes the input and output data structures (using Jackson’s structure diagrams, for instance) and then develops the program’s control structure based on these data structure diagrams. Various heuristics have been proposed to deal with special cases—for example, when there is a mismatch between the input and output structures.</para>
+      </section>
+      <section id="id-235475397039">
+        <title>Component-Based Design (CBD)</title>
+        <para id="id5156640">A software component is an independent unit, having well-defined interfaces and dependencies that can be composed and deployed independently. Component-based design addresses issues related to providing, developing, and integrating such components in order to improve reuse.</para>
+      </section>
+      <section id="id-274916495521">
+        <title>Other Methods</title>
+        <para id="id5156657">Other interesting but less mainstream approaches also exist: formal and rigorous methods and transformational methods.</para><para id="element-348">References:</para><para id="element-613">http://en.wikipedia.org/wiki/Software_design,
+http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-171Fall2003/CourseHome/,
+http://www.cs.cornell.edu/courses/cs501/2008sp/,
+http://www.sei.cmu.edu/,http://www.comp.lancs.ac.uk/computing/resources/IanS/SE7/, 
+http://www.ee.unb.ca/kengleha/courses/CMPE3213/IntroToSoftwareEng.htm,
+http://www.developerdotstar.com/mag/articles/reeves_design.html,
+http://trace.wisc.edu/docs/software_guidelines/software.pcs/spec_gl.htm, etc...</para>
+      </section>
+    </section>
+  </content>
+</document>

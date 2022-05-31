@@ -1,0 +1,230 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Software configuration management</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>6a431de2-ff2b-4b06-afbf-1779e7ddf237</md:uuid>
+</metadata>
+  <content>
+    <section id="id-306712089161">
+      <title>Introduction</title>
+      <para id="id4481528">A system can be defined as a collection of components organized to accomplish a specific function or set of functions. The configuration of a system is the functional and/or physical characteristics of hardware, firmware, or software, or a combination of these, as set forth in technical documentation and achieved in a product. It can also be thought of as a collection of specific versions of hardware, firmware, or software items combined according to specific build procedures to serve a particular purpose. Configuration management (CM), then, is the discipline of identifying the configuration of a system at distinct points in time for the purpose of systematically controlling changes to the configuration, and maintaining the integrity and traceability of the configuration throughout the system life cycle. It is formally defined as “A discipline applying technical and administrative direction and surveillance to: identify and document the functional and physical characteristics of a configuration item, control changes to those characteristics, record and report change processing and implementation status, and verify compliance with specified requirements.” </para>
+      <para id="id4481532">Software configuration management (SCM) is a critical element of software engineering.</para>
+      <para id="id4947685">Unfortunately, in practice it is often ignored until absolutely necessary. It may be introduced at first customer release, possibly through customer pressure. Tool support for SCM is limited in that only certain aspects of software development and maintenance are accommodated. SCM methods and tools are often viewed as intrusive by developers, a management tool that imposes additional work with little perceived benefit to the tasks of the developer.</para>
+      <para id="id14628804">Software configuration management (SCM) is a supporting software life cycle process which benefits project management, development and maintenance activities, assurance activities, and the customers and users of the end product. </para>
+      <para id="id11116540">The concepts of configuration management apply to all items to be controlled, although there are some differences in implementation between hardware CM and software CM.</para>
+      <para id="id3081185">SCM is closely related to the software quality assurance (SQA) activity. SQA processes provide assurance that the software products and processes in the project life cycle conform to their specified requirements by planning, enacting, and performing a set of activities to provide adequate confidence that quality is being built into the software. SCM activities help in accomplishing these SQA goals. </para>
+      <para id="id10241410">The SCM activities are: management and planning of the SCM process, software configuration identification, software configuration control, software configuration status accounting, software configuration auditing, and software release management and delivery.</para>
+      <para id="id3761635">The figure following shows a stylized representation of these activities:</para>
+      <figure id="id11231159">
+        <media id="idm9769776" alt=""><image src="../../media/graphics1-1545.jpg" mime-type="image/jpeg" height="397" width="658"/></media>
+      </figure>
+    </section>
+    <section id="id-289072965092">
+      <title>Management of the SCM Process</title>
+      <para id="id4292886">SCM controls the evolution and integrity of a product by identifying its elements, managing and controlling change, and verifying, recording, and reporting on configuration information. From the software engineer’s perspective, SCM facilitates development and change implementation activities. A successful SCM implementation requires careful planning and management. This, in turn, requires an understanding of the organizational context for, and the constraints placed on, the design and implementation of the SCM process.</para>
+      <section id="id-463444792213">
+        <title>Organizational Context for SCM </title>
+        <para id="id10976909">To plan an SCM process for a project, it is necessary to understand the organizational context and the relationships among the organizational elements. SCM interacts with several other activities or organizational elements.</para>
+        <para id="id9512834">The organizational elements responsible for the software engineering supporting processes may be structured in various ways. Although the responsibility for performing certain SCM tasks might be assigned to other parts of the organization such as the development organization, the overall responsibility for SCM often rests with a distinct organizational element or designated individual.</para>
+        <para id="id5055081">Software is frequently developed as part of a larger system containing hardware and firmware elements. In this case, SCM activities take place in parallel with hardware and firmware CM activities, and must be consistent with system-level CM. Buckley describes SCM within this context. Note that firmware contains hardware and software, therefore both hardware and software CM concepts are applicable.</para>
+        <para id="id4245214">SCM might interface with an organization’s quality assurance activity on issues such as records management and non-conforming items. Regarding the former, some tems under SCM control might also be project records subject to provisions of the organization’s quality assurance program. Managing nonconforming items is usually the responsibility of the quality assurance activity; however, SCM might assist with tracking and reporting on software configuration items falling into this category.</para>
+        <para id="id4245218">Perhaps the closest relationship is with the software development and maintenance organizations.</para>
+        <para id="id10331805">It is within this context that many of the software configuration control tasks are conducted. Frequently, the same tools support development, maintenance, and SCM purposes.</para>
+      </section>
+      <section id="id-569110358825">
+        <title>Constraints and Guidance for the SCM Process</title>
+        <para id="id12574988">Constraints affecting, and guidance for, the SCM process come from a number of sources. Policies and procedures set forth at corporate or other organizational levels might influence or prescribe the design and implementation of the SCM process for a given project. In addition, the contract between the acquirer and the supplier might contain provisions affecting the SCM process. For example, certain configuration audits might be required, or it might be specified that certain items be placed under CM. When software products to be developed have the potential to affect public safety, external regulatory bodies may impose constraints. Finally, the particular software life cycle process chosen for a software project and the tools selected to implement the software affect the design and implementation of the SCM process.</para>
+        <para id="id5762770">Guidance for designing and implementing an SCM process can also be obtained from “best practice,” as reflected in the standards on software engineering issued by the various standards organizations. Moore provides a roadmap to these organizations and their standards. Best practice is also reflected in process improvement and process assessment models such as the Software Engineering Institute’s Capability Maturity Model Integration (SEI/CMMI) and ISO/IEC15504 Software Engineering–Process Assessment (ISO/IEC 15504-98).</para>
+      </section>
+      <section id="id-409175529033">
+        <title>Planning for SCM</title>
+        <para id="id6413061">The planning of an SCM process for a given project should be consistent with the organizational context, applicable constraints, commonly accepted guidance, and the nature of the project (for example, size and criticality). The major activities covered are: Software Configuration Identification, Software Configuration Control, Software Configuration Status Accounting, Software Configuration Auditing, and Software Release Management and Delivery. In addition, issues such as organization and responsibilities, resources and schedules, tool selection and implementation, vendor and subcontractor control, and interface control are typically considered. The results of the planning activity are recorded in an SCM Plan (SCMP), which is typically subject to SQA review and audit. </para>
+        <section id="id-558775508481">
+          <title>SCM organization and responsibilities</title>
+          <para id="id10276565">To prevent confusion about who will perform given SCM activities or tasks, organizations to be involved in the SCM process need to be clearly identified. Specific responsibilities for given SCM activities or tasks also need to be assigned to organizational entities, either by title or by organizational element. The overall authority and reporting channels for SCM should also be identified, although this might be accomplished at the project management or quality assurance planning stage.</para>
+        </section>
+        <section id="id-578698666136">
+          <title>SCM resources and schedules</title>
+          <para id="id8820417">Planning for SCM identifies the staff and tools involved in carrying out SCM activities and tasks. It addresses scheduling questions by establishing necessary sequences of SCM tasks and identifying their relationships to the project schedules and milestones established at the project management planning stage. Any training requirements necessary for implementing the plans and training new staff members are also specified.</para>
+        </section>
+        <section id="id-595170041204">
+          <title>Tool selection and implementation</title>
+          <para id="id4271015">Different types of tool capabilities, and procedures for their use, support SCM activities. Depending on the situation, these tool capabilities can be made available with some combination of manual tools, automated tools providing a single SCM capability, automated tools integrating a range of SCM (and perhaps other) capabilities, or integrated tool environments which serve the needs of multiple participants in the software engineering process (for example, SCM, development, V&amp;V). Automated tool support becomes increasingly important, and increasingly difficult to establish, as projects grow in size and as project environments become more complex. These tool capabilities provide support for:</para>
+          <list list-type="bulleted" id="id4271019">
+            <item>the SCM Library </item>
+            <item>the software change request (SCR) and approval procedures </item>
+            <item>code (and related work products) and change management tasks </item>
+            <item>reporting software configuration status and collecting SCM measurements </item>
+            <item>software configuration auditing </item>
+            <item>managing and tracking software documentation </item>
+            <item>performing software builds </item>
+            <item>managing and tracking software releases and their delivery </item>
+          </list>
+          <para id="id9581285">The tools used in these areas can also provide measurements for process improvement. Royce describes seven core measures of value in managing software engineering processes. Information available from the various SCM tools relates to Royce’s Work and Progress management indicator and to his quality indicators of Change Traffic and Stability, Breakage and Modularity, Rework and Adaptability, and MTBF (mean time between failures) and Maturity. Reporting on these indicators can be organized in various ways, such as by software configuration item or by type of change requested. </para>
+          <para id="id10132751">We can represent a mapping of tool capabilities and procedures to SCM Activities:</para>
+          <figure id="id9245615">
+            <media id="idm2967904" alt=""><image src="../../media/graphics2-153b.jpg" mime-type="image/jpeg" height="343" width="600"/></media>
+          </figure>
+          <para id="id3763078">In this example, code management systems support the operation of software libraries by controlling access to library elements, coordinating the activities of multiple users, and helping to enforce operating procedures. Other tools support the process of building software and release documentation from the software elements contained in the libraries. Tools for managing software change requests support the change control procedures applied to controlled software items. Other tools can provide database management and reporting capabilities for management, development, and quality assurance activities. As mentioned above, the capabilities of several tool types might be integrated into SCM systems, which in turn are closely coupled to various other software activities.</para>
+          <para id="id3763083">In planning, the software engineer picks SCM tools fit for the job. Planning considers issues that might arise in the implementation of these tools, particularly if some form of culture change is necessary. </para>
+        </section>
+        <section id="id-598362569013">
+          <title>Vendor/Subcontractor Control</title>
+          <para id="id8866149">A software project might acquire or make use of purchased software products, such as compilers or other tools. SCM planning considers if and how these items will be taken under configuration control (for example, integrated into the project libraries) and how changes or updates will be evaluated and managed.</para>
+          <para id="id3412589">Similar considerations apply to subcontracted software. In this case, the SCM requirements to be imposed on the subcontractor’s SCM process as part of the subcontract and the means for monitoring compliance also need to be established. The latter includes consideration of what SCM information must be available for effective compliance monitoring.</para>
+        </section>
+        <section id="id-32096239466">
+          <title>Interface control</title>
+          <para id="id11044169">When a software item will interface with another software or hardware item, a change to either item can affect the other. The planning for the SCM process considers how the interfacing items will be identified and how changes to the items will be managed and communicated. The SCM role may be part of a larger, system-level process for interface specification and control, and may involve interface specifications, interface control plans, and interface control documents. In this case, SCM planning for interface control takes place within the context of the system-level process. </para>
+        </section>
+      </section>
+      <section id="id-844444389609">
+        <title>SCM Plan</title>
+        <para id="id5636209">The results of SCM planning for a given project are recorded in a Software Configuration Management Plan (SCMP), a “living document” which serves as a reference for the SCM process. It is maintained (that is, updated and approved) as necessary during the software life cycle. In implementing the SCMP, it is typically necessary to develop a number of more detailed, subordinate procedures defining how specific requirements will be carried out during day-to-day activities.</para>
+        <para id="id10241381">Guidance on the creation and maintenance of an SCMP, based on the information produced by the planning activity, is available from a number of sources, such as IEEE828-98. This reference provides requirements for the information to be contained in an SCMP. It also defines and describes six categories of SCM information to be included in an SCMP:</para>
+        <list list-type="bulleted" id="id10241385">
+          <item>Introduction (purpose, scope, terms used) </item>
+          <item>SCM Management (organization, responsibilities, authorities, applicable policies, directives, and procedures) </item>
+          <item>SCM Activities (configuration identification, configuration control, and so on) </item>
+          <item>SCM Schedules (coordination with other project activities) </item>
+          <item>SCM Resources (tools, physical resources, and humanresources) </item>
+          <item>SCMP Maintenance </item>
+        </list>
+      </section>
+      <section id="id-6388002411">
+        <title>Surveillance of Software Configuration Management</title>
+        <para id="id3996038">After the SCM process has been implemented, some degree of surveillance may be necessary to ensure that the provisions of the SCMP are properly carried out. There are likely to be specific SQA requirements for ensuring compliance with specified SCM processes and procedures. This could involve an SCM authority ensuring that those with the assigned responsibility perform the defined SCM tasks correctly. The software quality assurance authority, as part of a compliance auditing activity, might also perform this surveillance.</para>
+        <para id="id11018370">The use of integrated SCM tools with process control capability can make the surveillance task easier. Some tools facilitate process compliance while providing flexibility for the software engineer to adapt procedures. Other tools enforce process, leaving the software engineer with less flexibility. Surveillance requirements and the level of flexibility to be provided to the software engineer are important considerations in tool selection.</para>
+        <section id="id-659625310983">
+          <title>SCM measures and measurement</title>
+          <para id="id12312685">SCM measures can be designed to provide specific information on the evolving product or to provide insight into the functioning of the SCM process. A related goal of monitoring the SCM process is to discover opportunities for process improvement. Measurements of SCM processes provide a good means for monitoring the effectiveness of SCM activities on an ongoing basis. These measurements are useful in characterizing the current state of the process, as well as in providing a basis for making comparisons over time. Analysis of the measurements may produce insights leading to process changes and corresponding updates to the SCMP.</para>
+          <para id="id8536018">Software libraries and the various SCM tool capabilities provide sources for extracting information about the characteristics of the SCM process (as well as providing project and management information). For example, information about the time required to accomplish various types of changes would be useful in an evaluation of the criteria for determining what levels of authority are optimal for authorizing certain types of changes.</para>
+          <para id="id8957576">Care must be taken to keep the focus of the surveillance on the insights that can be gained from the measurements, not on the measurements themselves.</para>
+        </section>
+        <section id="id-945337859905">
+          <title>In-process audits of SCM</title>
+          <para id="id3129210">Audits can be carried out during the software engineering process to investigate the current status of specific elements of the configuration or to assess the implementation of the SCM process. In-process auditing of SCM provides a more formal mechanism for monitoring selected aspects of the process and may be coordinated with the SQA function.</para>
+        </section>
+      </section>
+    </section>
+    <section id="id-41144630841">
+      <title>Software Configuration Identification</title>
+      <para id="id3762253">The software configuration identification activity identifies items to be controlled, establishes identification schemes for the items and their versions, and establishes the tools and techniques to be used in acquiring and managing controlled items. These activities provide the basis for the other SCM activities.</para>
+      <section id="id-534225864005">
+        <title>Identifying Items to Be Controlled</title>
+        <para id="id3189265">A first step in controlling change is to identify the software items to be controlled. This involves understanding the software configuration within the context of the system configuration, selecting software configuration items, developing a strategy for labeling software items and describing their relationships, and identifying the baselines to be used, along with the procedure for a baseline’s acquisition of the items.</para>
+        <section id="id-889543890159">
+          <title>Software configuration</title>
+          <para id="id3063250">A software configuration is the set of functional and physical characteristics of software as set forth in the technical documentation or achieved in a product. It can be viewed as a part of an overall system configuration.</para>
+        </section>
+        <section id="id-952262397838">
+          <title>Software configuration item</title>
+          <para id="id3159672">A software configuration item (SCI) is an aggregation of software designated for configuration management and is treated as a single entity in the SCM process. A variety of items, in addition to the code itself, is typically controlled by SCM. Software items with potential to become SCIs include plans, specifications and design documentation, testing materials, software tools, source and executable code, code libraries, data and data dictionaries, and documentation for installation, maintenance, operations, and software use.</para>
+          <para id="id3159676">Selecting SCIs is an important process in which a balance must be achieved between providing adequate visibility for project control purposes and providing a manageable number of controlled items.</para>
+        </section>
+        <section id="id-161836963288">
+          <title>Software configuration item relationships</title>
+          <para id="id14270496">The structural relationships among the selected SCIs, and their constituent parts, affect other SCM activities or tasks, such as software building or analyzing the impact of proposed changes. Proper tracking of these relationships is also important for supporting traceability. The design of the identification scheme for SCIs should consider the need to map the identified items to the software structure, as well as the need to support the evolution of the software items and their relationships.</para>
+        </section>
+        <section id="id-950206302799">
+          <title>Software version</title>
+          <para id="id13290607">Software items evolve as a software project proceeds. A version of a software item is a particular identified and specified item. It can be thought of as a state of an evolving item. A revision is a new version of an item that is intended to replace the old version of the item. A variant is a new version of an item that will be added to the configuration without replacing the old version.</para>
+        </section>
+        <section id="id-974233763219">
+          <title>Baseline</title>
+          <para id="id14328314">A software baseline is a set of software configuration items formally designated and fixed at a specific time during the software life cycle. The term is also used to refer to a particular version of a software configuration item that has been agreed on. In either case, the baseline can only be changed through formal change control procedures. A baseline, together with all approved changes to the baseline, represents the current approved configuration.</para>
+          <para id="id14501822">Commonly used baselines are the functional, allocated, developmental, and product baselines. The functional baseline corresponds to the reviewed system requirements. The allocated baseline corresponds to the reviewed software requirements specification and software interface requirements specification. The developmental baseline represents the evolving software configuration at selected times during the software life cycle. Change authority for this baseline typically rests primarily with the development organization, but may be shared with other organizations (for example, SCM or Test). The product baseline corresponds to the completed software product delivered for system integration. The baselines to be used for a given project, along with their associated levels of authority needed for change approval, are typically identified in the SCMP.</para>
+        </section>
+        <section id="id-588137224205">
+          <title>Acquiring software configuration items</title>
+          <para id="id3150899">Software configuration items are placed under SCM control at different times; that is, they are incorporated into a particular baseline at a particular point in the software life cycle. The triggering event is the completion of some form of formal acceptance task, such as a formal review.</para>
+          <para id="id13786025">This is an acquisition of items: </para>
+          <figure id="id4010047">
+            <media id="idp563968" alt=""><image src="../../media/graphics3-5044.jpg" mime-type="image/jpeg" height="433" width="600"/></media>
+          </figure>
+          <para id="id3109539">Following the acquisition of an SCI, changes to the item must be formally approved as appropriate for the SCI and the baseline involved, as defined in the SCMP. Following approval, the item is incorporated into the software baseline according to the appropriate procedure.</para>
+        </section>
+      </section>
+      <section id="id-128114339452">
+        <title>Software Library </title>
+        <para id="id3166657">A software library is a controlled collection of software and related documentation designed to aid in software development, use, and maintenance. It is also instrumental in software release management and delivery activities. Several types of libraries might be used, each corresponding to a particular level of maturity of the software item. For example, a working library could support coding and a project support library could support testing, while a master library could be used for finished products. An appropriate level of SCM control (associated baseline and level of authority for change) is associated with each library. Security, in terms of access control and the backup facilities, is a key aspect of library management.</para>
+        <para id="id3166661">The tool(s) used for each library must support the SCM control needs for that library, both in terms of controlling SCIs and controlling access to the library. At the working library level, this is a code management capability serving developers, maintainers, and SCM. It is focused on managing the versions of software items while supporting the activities of multiple developers. At higher levels of control, access is more restricted and SCM is the primary user.</para>
+        <para id="id3101443">These libraries are also an important source of information for measurements of work and progress.</para>
+      </section>
+    </section>
+    <section id="id-130909005804">
+      <title>Software Configuration Control</title>
+      <para id="id12068368">Software configuration control is concerned with managing changes during the software life cycle. It covers the process for determining what changes to make, the authority for approving certain changes, support for the implementation of those changes, and the concept of formal deviations from project requirements, as well as waivers of them. Information derived from these activities is useful in measuring change traffic and breakage, and aspects of rework.</para>
+      <section id="id-248974376316">
+        <title>Requesting, Evaluating, and Approving Software Changes</title>
+        <para id="id4010106">The first step in managing changes to controlled items is determining what changes to make. The software change request process provides formal procedures for submitting and recording change requests, evaluating the potential cost and impact of a proposed change, and accepting, modifying, or rejecting the proposed change. Requests for changes to software configuration items may be originated by anyone at any point in the software life cycle and may include a suggested solution and requested priority. One source of change requests is the initiation of corrective action in response to problem reports. Regardless of the source, the type of change (for example, defect or enhancement) is usually recorded on the SCR.</para>
+        <para id="id3098669">
+          <media id="idp3497888" alt=""><image src="../../media/graphics4-8f96.jpg" mime-type="image/jpeg" height="355" width="600"/></media>
+        </para>
+        <para id="id3171238">This flow of a Change Control Process provides an opportunity for tracking defects and collecting change activity measurements by change type. Once an SCR is received, a technical evaluation (also known as an impact analysis) is performed to determine the extent of the modifications that would be necessary should the change request be accepted. A good understanding of the relationships among software (and possibly, hardware) items is important for this task. Finally, an established authority, commensurate with the affected baseline, the SCI involved, and the nature of the change, will evaluate the technical and managerial aspects of the change request and either accept, modify, reject, or defer the proposed change.</para>
+        <section id="id-50667580809">
+          <title>Software Configuration Control Board</title>
+          <para id="id3100334">The authority for accepting or rejecting proposed changes rests with an entity typically known as a Configuration Control Board (CCB). In smaller projects, this authority may actually reside with the leader or an assigned individual rather than a multi-person board. There can be multiple levels of change authority depending on a variety of criteria, such as the criticality of the item involved, the nature of the change (for example, impact on budget and schedule), or the current point in the life cycle. The composition of the CCBs used for a given system varies depending on these criteria (an SCM representative would always be present). All stakeholders, appropriate to the level of the CCB, are represented. When the scope of authority of a CCB is strictly software, it is known as a Software Configuration Control Board (SCCB). The activities of the CCB are typically subject to software quality audit or review.</para>
+        </section>
+        <section id="id-851229964525">
+          <title>Software change request process</title>
+          <para id="id4051048">An effective software change request (SCR) process requires the use of supporting tools and procedures ranging from paper forms and a documented procedure to an electronic tool for originating change requests, enforcing the flow of the change process, capturing CCB decisions, and reporting change process information. A link between this tool capability and the problem-reporting system can facilitate the tracking of solutions for reported problems. Change process descriptions and supporting forms (information) are given in a variety of references.</para>
+        </section>
+      </section>
+      <section id="id-438918194383">
+        <title>Implementing Software Changes</title>
+        <para id="id14668218">Approved SCRs are implemented using the defined software procedures in accordance with the applicable schedule requirements. Since a number of approved SCRs might be implemented simultaneously, it is necessary to provide a means for tracking which SCRs are incorporated into particular software versions and baselines. As part of the closure of the change process, completed changes may undergo configuration audits and software quality verification. This includes ensuring that only approved changes have been made. The change request process described above will typically document the SCM (and other) approval information for the change. </para>
+        <para id="id14668222">The actual implementation of a change is supported by the library tool capabilities, which provide version management and code repository support. At a minimum, these tools provide check-in/out and associated version control capabilities. More powerful tools can support parallel development and geographically distributed environments. These tools may be manifested as separate specialized applications under the control of an independent SCM group. They may also appear as an integrated part of the software engineering environment. Finally, they may be as elementary as a rudimentary change control system provided with an operating system.</para>
+      </section>
+      <section id="id-813324652822">
+        <title>Deviations and Waivers</title>
+        <para id="id13025908">The constraints imposed on a software engineering effort or the specifications produced during the development activities might contain provisions which cannot be satisfied at the designated point in the life cycle. A deviation is an authorization to depart from a provision prior to the development of the item. A waiver is an authorization to use an item, following its development, that departs from the provision in some way. In these cases, a formal process is used for gaining approval for deviations from, or waivers of, the provisions.</para>
+      </section>
+    </section>
+    <section id="id-474030103445">
+      <title>Software Configuration Status Accounting</title>
+      <para id="id14596715">Software configuration status accounting (SCSA) is the recording and reporting of information needed for effective management of the software configuration.</para>
+      <section id="id-456230974848">
+        <title>Software Configuration Status Information</title>
+        <para id="id3146350">The SCSA activity designs and operates a system for the capture and reporting of necessary information as the life cycle proceeds. As in any information system, the configuration status information to be managed for the evolving configurations must be identified, collected, and maintained. Various information and measurements are needed to support the SCM process and to meet the configuration status reporting needs of management, software engineering, and other related activities. The types of information available include the approved configuration identification, as well as the identification and current implementation status of changes, deviations, and waivers. </para>
+        <para id="id14435293">Some form of automated tool support is necessary to accomplish the SCSA data collection and reporting tasks. This could be a database capability, or it could be a standalone tool or a capability of a larger, integrated tool environment.</para>
+      </section>
+      <section id="id-560564229655">
+        <title>Software Configuration Status Reporting</title>
+        <para id="id3086406">Reported information can be used by various organizational and project elements, including the development team, the maintenance team, project management, and software quality activities. Reporting can take the form of ad hoc queries to answer specific questions or the periodic production of predesigned reports. Some information produced by the status accounting activity during the course of the life cycle might become quality assurance records.</para>
+        <para id="id3086411">In addition to reporting the current status of the configuration, the information obtained by the SCSA can serve as a basis for various measurements of interest to management, development, and SCM. Examples include the number of change requests per SCI and the average time needed to implement a change request.</para>
+      </section>
+    </section>
+    <section id="id-877147392243">
+      <title>Software Configuration Auditing</title>
+      <para id="id3948488">A software audit is an activity performed to independently evaluate the conformance of software products and processes to applicable regulations, standards, guidelines, plans, and procedures. Audits are conducted according to a well-defined process consisting of various auditor roles and responsibilities. Consequently, each audit must be carefully planned. An audit can require a number of individuals to perform a variety of tasks over a fairly short period of time. Tools to support the planning and conduct of an audit can greatly facilitate the process.</para>
+      <para id="id3948491">The software configuration auditing activity determines the extent to which an item satisfies the required functional and physical characteristics. Informal audits of this type can be conducted at key points in the life cycle. Two types of formal audits might be required by the governing contract (for example, in contracts covering critical software): the Functional Configuration Audit (FCA) and the Physical Configuration Audit (PCA). Successful completion of these audits can be a prerequisite for the establishment of the product baseline. Buckley contrasts the purposes of the FCA and PCA in hardware versus software contexts, and recommends careful evaluation of the need for a software FCA and PCA before performing them.</para>
+      <section id="id-0678954438294">
+        <title>Software Functional Configuration Audit</title>
+        <para id="id13966463">The purpose of the software FCA is to ensure that the audited software item is consistent with its governing specifications. The output of the software verification and validation activities is a key input to this audit.</para>
+      </section>
+      <section id="id-47796444741">
+        <title>Software Physical Configuration Audit</title>
+        <para id="id3165722">The purpose of the software physical configuration audit (PCA) is to ensure that the design and reference documentation is consistent with the as-built software product.</para>
+      </section>
+      <section id="id-85999397985">
+        <title>In-process Audits of a Software Baseline</title>
+        <para id="id3117134">As mentioned above, audits can be carried out during the development process to investigate the current status of specific elements of the configuration. In this case, an audit could be applied to sampled baseline items to ensure that performance is consistent with specifications or to ensure that evolving documentation continues to be consistent with the developing baseline item.</para>
+      </section>
+    </section>
+    <section id="id-303552637877">
+      <title>Software Release Management and Delivery </title>
+      <para id="id12262526">The term “release” is used in this context to refer to the distribution of a software configuration item outside the development activity. This includes internal releases as well as distribution to customers. When different versions of a software item are available for delivery, such as versions for different platforms or versions with varying capabilities, it is frequently necessary to recreate specific versions and package the correct materials for delivery of the version. The software library is a key element in accomplishing release and delivery tasks. </para>
+      <section id="id-927299065645">
+        <title>Software Building</title>
+        <para id="id14550420">Software building is the activity of combining the correct versions of software configuration items, using the appropriate configuration data, into an executable program for delivery to a customer or other recipient, such as the testing activity. For systems with hardware or firmware, the executable program is delivered to the system-building activity. Build instructions ensure that the proper build steps are taken and in the correct sequence. In addition to building software for new releases, it is usually also necessary for SCM to have the capability to reproduce previous releases for recovery, testing, maintenance, or additional release purposes.</para>
+        <para id="id14550425">Software is built using particular versions of supporting tools, such as compilers. It might be necessary to rebuild an exact copy of a previously built software configuration item. In this case, the supporting tools and associated build instructions need to be under SCM control to ensure availability of the correct versions of the tools.</para>
+        <para id="id12330802">A tool capability is useful for selecting the correct versions of software items for a given target environment and for automating the process of building the software from the selected versions and appropriate configuration data. For large projects with parallel development or distributed development environments, this tool capability is necessary. Most software engineering environments provide this capability. These tools vary in complexity from requiring the software engineer to learn a specialized scripting language to graphics-oriented approaches that hide much of the complexity of an “intelligent” build facility.</para>
+        <para id="id13730158">The build process and products are often subject to software quality verification. Outputs of the build process might be needed for future reference and may become quality assurance records.</para>
+      </section>
+      <section id="id-306039635423">
+        <title>Software Release Management</title>
+        <para id="id13479151">Software release management encompasses the identification, packaging, and delivery of the elements of a product, for example, executable program, documentation, release notes, and configuration data. Given that product changes can occur on a continuing basis, one concern for release management is determining when to issue a release. The severity of the problems addressed by the release and measurements of the fault densities of prior releases affect this decision. The packaging task must identify which product items are to be delivered, and then select the correct variants of those items, given the intended application of the product. The information documenting the physical contents of a release is known as a version description document. The release notes typically describe new capabilities, known problems, and platform requirements necessary for proper product operation. The package to be released also contains installation or upgrading instructions. The latter can be complicated by the fact that some current users might have versions that are several releases old. Finally, in some cases, the release management activity might be required to track the distribution of the product to various customers or target systems. An example would be a case where the supplier was required to notify a customer of newly reported problems.</para>
+        <para id="id13479154">A tool capability is needed for supporting these release management functions. It is useful to have a connection with the tool capability supporting the change request process in order to map release contents to the SCRs that have been received. This tool capability might also maintain information on various target platforms and on various customer environments.</para>
+      </section>
+    </section>
+  </content>
+</document>

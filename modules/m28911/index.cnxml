@@ -1,0 +1,59 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Exercise</title>
+  <metadata>
+  <md:content-id>m28911</md:content-id><md:title>Exercise</md:title>
+  <md:abstract/>
+  <md:uuid>bba8e8e6-f2ea-4548-ae30-88dc19854a3b</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-25919281006">
+      <title>Exercises</title>
+      <para id="id29284022">Exercises (from the readings, assigned labs, software projects, etc.) will be used to complement the lectures and readings. Exercises are due at the beginning of class as specified in the course schedule. </para>
+      <para id="id29800862">.Here are some exercises (Software Engineering, Ian Sommerville, Eighth Edition, Addison-Wesley):</para>
+      <list id="id29548437" list-type="enumerated">
+        <item>What are the differences between generic software product development and custom software development?</item>
+        <item>What are the important attributes which all software products should have?</item>
+        <item>What are differences between a software process and a software process model?</item>
+        <item>Explain why system testing costs are particularly high for generic software products that are sold to a very wide market.</item>
+        <item>What are the three principal types of critical system? Explain the differences between these.</item>
+        <item>Suggest reasons why dependability is important in critical systems.</item>
+        <item>What are the most important dimensions of system dependability?</item>
+        <item>Why is the cost of assuring dependability exponential?</item>
+        <item>Explain why programs that are developed using evolutionary development are likely to be difficult to maintain.</item>
+        <item>Explain how both are waterfall model of the process and prototyping model can be accommodated in the spiral process model.</item>
+        <item>What are the advantages of providing static and dynamic views of the software process as in the Rational Unifield Process.</item>
+        <item>Suggest why it is important to make a distinction between developing the user requirements and developing system requirements in the requirements engineering process.</item>
+        <item>Explain why a software system that is used in a real-world environment must change or become progressively less useful.</item>
+        <item>Explain why the intangibility of software systems poses special problems for software project management.</item>
+        <item>Explain why the best programmer do not always make the best software managers. </item>
+        <item>Explain why the process of project planning is iterative and why a plan must be continually reviewed during a software project.</item>
+        <item>Briefly explain the purpose of each of the sections in a software project plan.</item>
+        <item>What is the critical distinction between a milestone and a deliverable?</item>
+        <item>Identify and briefly describe four types of requirements that may be defined for a computer-based system.</item>
+        <item>Discuss the problems of using natural language for defining user and system requirements, and show, using small examples, how structuring natural language into forms can help avoid some of these difficulties.</item>
+        <item>Based on your project (for assignment), draw a data-flow diagram modeling the data processing.</item>
+        <item>What is the fundamental difference between hardware and software failures?</item>
+        <item>During the first decades of computers, programming was learned through the guidance of a more experienced programmer, in the way of an apprenticeship. Where in software engineering can you still see the effect of these "good old days"? Compare to other fields of engineering such as construction that has also originally been learned by starting as a handyman at a construction site. </item>
+        <item>Software is often a part of various devices and systems where malfunction can have a very dramatic effect on people or the entire society - consider for example banking systems, power distribution or hospital equipment. What is (or, what should be) the responsibility of software providers (organizations or individual software engineers) for their work? In some countries software engineering is a certified profession in a similar way as doctors: what are the advantages and disadvantages of this solution? Do you think that it solves the problem above: why / why not?</item>
+        <item>Explain why the process of project planning is iterative and requires continuous reviewing and revising of the plan. Consider each part of the project plan one by one and try to think of reasons that may cause changes in the part. How could you make it easier to update the plan? </item>
+        <item>What product, hardware, personnel, and project factors does the project have that should be taken into account as adjustment factors (cost drivers) when computing the final effort estimate? </item>
+        <item>Suggest reasons why this statement is true - or is it true? What should the project manager of a late software project do to cure the situation?</item>
+        <item>Give non-functional requirements to your project (for assignments).</item>
+        <item>Explain why it is almost inevitable that the requirements of different stakeholders will conflict in some ways. How should the project group handle conflicting requirements? </item>
+        <item>What is the status of modeling in requirements engineering? Why is one model usually not sufficient in the modeling phase?</item>
+        <item>Create a UML use case diagram of a WWW-based store software. You can concentrate on the actors and use cases. Give a short description of each use case (but don't get into too deep details). </item>
+        <item>Create a UML class diagram based on aggregates and composition of a structure of a laptop computer. </item>
+        <item>Create a data flow diagram of an ATM (automatic teller machine). </item>
+        <item>Create a UML activity diagram of an ATM. </item>
+        <item>You have been assigned to calculate the number of days between two given dates (the same date = 0 days). Create three different abstractions of your solution.</item>
+        <item>How do components differ from objects? Why does object-oriented design become easier when a new abstract entity, component, is added between subsystems and objects? </item>
+        <item>What kind of effects do you see in the use of software product families on requirements engineering, design, implementation, testing and project management? </item>
+        <item>Why does integration testing reveal errors although unit testing has been done well? Why does system testing reveal errors although integration testing has been done well? Why does beta-testing reveal errors although system testing has been done well?</item>
+        <item>Standards and defined work processes are an essential part of quality assurance. On the other hand, software engineers sometimes oppose them, claiming that they stifle technological innovation. Give examples of situations where adhering to standards might be harmful. What problems (if any) would bending the rules cause in your example cases? </item>
+        <item>Software process measurement often involves measuring the work of individual people in the process, such as time spent or faults made in certain tasks. What problems are there in collecting this kind of information and how could these problems be reduced? </item>
+        <item>Suggest a few application domains where the SEI capability model is unlikely to be appropriate. Give reasons why this is the case. Do you think that some of the process types described by Sommerville (informal, managed, methodical, improving) would be better in describing typical software processes in these application fields? </item>
+      </list>
+    </section>
+  </content>
+</document>

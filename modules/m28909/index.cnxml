@@ -1,0 +1,181 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Syllabus</title>
+  <metadata>
+  <md:content-id>m28909</md:content-id><md:title>Syllabus</md:title>
+  <md:abstract>This is the syllabus of the Software Engineering course.</md:abstract>
+  <md:uuid>972d41c5-c19b-4051-90e3-662c6f5e5977</md:uuid>
+</metadata>
+
+<content>
+    <section id="id-804737346716">
+      <title>Description </title>
+      <para id="id34720515">Software engineering is a very broad field. It encompase virtual everything a person might want to know in order to develop software - software that is correct, on time, and on budget. Most other computer science courses emphasize the technical foundations of software development, such as programming, algorithms, data structures, languages, etc.</para>
+      <para id="id34720525">This course focusses on the pragmatic aspects, such as requirements analysis, cost estimation, design, team organization, quality control, configuration management, verification, testing, and maintenance. Students work in teams on projects for real clients. This work includes a feasibility study, requirements analysis, object-oriented design, implementation, testing, and delivery to the client. Additional topics covered in lectures include professionalism, project management, and the legal framework for software development.</para>
+      <para id="id34720538">This course is compiled from documents of MIT OpenCourseWare, the Connexion project of Rice University, and from free online courses and documents such as</para>
+      <para id="id34720546"><link url="http://www.ecs.syr.edu/faculty/fawcett/handouts/webpages/FawcettHome.htm">http://www.ecs.syr.edu/faculty/fawcett/handouts/webpages/FawcettHome.htm</link>,</para>
+      <para id="id34720562"><link url="http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-171Fall2003/CourseHome/">http://ocw.mit.edu/OcwWeb/Electrical-Engineering-and-Computer-Science/6-171Fall2003/CourseHome/</link>, </para>
+      <para id="id34720579"><link url="http://en.wikipedia.org/wiki/Software_engineering">http://en.wikipedia.org/wiki/Software_engineering</link>,</para>
+      <para id="id34720595"><link url="http://www.cs.cornell.edu/courses/cs501/2008sp/">http://www.cs.cornell.edu/courses/cs501/2008sp/</link>,</para>
+      <para id="id38028048"><link url="http://www.sei.cmu.edu/">http://www.sei.cmu.edu/</link>,</para>
+      <para id="id38028062"><link url="http://www.comp.lancs.ac.uk/computing/resources/IanS/SE7/">http://www.comp.lancs.ac.uk/computing/resources/IanS/SE7/</link>,</para>
+      <para id="id38028078"><link url="http://www.ee.unb.ca/kengleha/courses/CMPE3213/IntroToSoftwareEng.htm">http://www.ee.unb.ca/kengleha/courses/CMPE3213/IntroToSoftwareEng.htm</link>,</para>
+      <para id="id38028094"><link url="http://cs.wwc.edu/~aabyan/435/intro.html">http://cs.wwc.edu/~aabyan/435/intro.html</link>,</para>
+      <para id="id38028108"><link url="http://www.ocwconsortium.org/">http://www.ocwconsortium.org/</link>,</para>
+      <para id="id38028122">and etc…</para>
+      <para id="id37158902">We have arranged their contents to create a complete course. We hope it will be useful to study Software Engineering.</para>
+    </section>
+    <section id="id-865823194369">
+      <title>Course Objectives</title>
+      <para id="id37158915">Theory, the students have</para>
+      <list id="id37158920" list-type="bulleted">
+        <item>got an overview of software engineering, </item>
+        <item>got a survey of the history, ethics and risks of software engineering, </item>
+        <item>understood various approaches and methodologies used in different phases of software development lifecycle, including requirements analysis and pecification, software design, software construction, software maintenance, and software process. </item>
+      </list>
+      <para id="id37158944">Practice </para>
+      <list id="id37158949" list-type="bulleted">
+        <item>students will execute a real software engineering project, </item>
+        <item>students can apply that knowledge in their future research and practice. </item>
+      </list>
+    </section>
+    <section id="id-882925909247">
+      <title>Prerequisites </title>
+      <para id="id37158972">The formal prerequisites for this course are Programming Languages (C/C++, Perl, Java, .Net,…), Data Structures and Algorithms, and Database Management Systems.</para>
+      <para id="id37158982">The following are the specific capabilities you will need from the prerequisite courses:</para>
+      <list id="id37158988" list-type="bulleted">
+        <item>experience with the software development process </item>
+        <item>skill in independent programming and problem solving </item>
+        <item>skill using an object oriented language </item>
+        <item>mathematical maturity, including at least: <list id="id38285640" list-type="bulleted"><item>methods of proof: induction, cases </item><item>elementary formal logic: working with formulae using logical connectives, quantifiers, modus ponens, implication, satisfaction </item></list></item>
+        <item>finite state machines: state diagrams, state tables, reachability </item>
+        <item>formal languages: BNF, regular expressions</item>
+      </list>
+    </section>
+    <section id="id-872259765844">
+      <title>Organization</title>
+      <para id="id38285672">Class sessions will be a combination of lecture and seminar formats. We'll cover the course's primary topics in these sessions, with reading and homework assigments that provide opportunities to gain a deeper understanding of the underlying issues and techniques of software engineering. Actual labs and software development projects will provide a hands-on approach to exploring these topics throughout the semester. Given that this is a 3 credit course, it is expected that you will spend an average of 10 hours per week (including in-class and lab time) on the course and related material for the duration of the semester.</para>
+    </section>
+    <section id="id-844605518752">
+      <title>Readings</title>
+      <para id="id38285695">Here are some general books on software engineering:</para>
+      <list id="id38285700" list-type="bulleted">
+        <item>Sommerville, Ian, Software Engineering, Eighth Edition, Addison-Wesley, 2007.</item>
+        <item>Frederick P. Brooks, Jr., The Mythical Man Month, Addison-Wesley, 1972.</item>
+        <item>Pfleeger, Shari Lawrence, Software Engineering Theory and Practice, second edition, Prentice- Hall 2001. </item>
+        <item>Bernd Bruegge and Allen H. Dutoit, Object-Oriented Software Engineering Using UML, Patterns and Java, Second Edition, Prentice Hall, 2004.</item>
+      </list>
+    </section>
+    <section id="id-378533948974">
+      <title>Grading Plan</title>
+      <para id="id38054515">Since software engineering is a broad subject matter, mastery of the topic as covered by the scope of our course can be manifested in a variety of ways. Your grade in the course will be based on your achievement of the course objectives as demonstrated in your homework assigments, programming deliveries, and participation in class discussions.</para>
+      <para id="id38054525">Course component grading weight :</para>
+      <list id="id38054532" list-type="bulleted">
+        <item>Exercises: 40% </item>
+        <item>Group Software Project: 50% </item>
+        <item>Participation: 10% </item>
+      </list>
+    </section>
+    <section id="id-832208844336">
+      <title>Schedule</title>
+      <table id="id38778090" summary="">
+<tgroup cols="3"><colspec colnum="1" colname="c1"/>
+	<colspec colnum="2" colname="c2"/>
+	<colspec colnum="3" colname="c3"/>
+	<tbody>
+		<row>
+			<entry>Week/Session</entry>
+			<entry>Topic</entry>
+			<entry>Reading</entry>
+		</row>
+		<row>
+			<entry>Week 1</entry>
+			<entry>Introduction</entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapters 1, 2, 3. The Mythical Man Month; Frederick P. Brooks</entry>
+		</row>
+		<row>
+			<entry>Week 2</entry>
+			<entry>Software development process</entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapters 4</entry>
+		</row>
+		<row>
+			<entry>Week 3</entry>
+			<entry>Requirements analysis </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapter 6</entry>
+		</row>
+		<row>
+			<entry>Week 4</entry>
+			<entry>Discussion on assignment #1</entry>
+			<entry/>
+		</row>
+		<row>
+			<entry>Week 5</entry>
+			<entry>Software Design </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapters 11, 14. Object-Oriented Software Engineering Using UML; Bernd Bruegge and Allen H. Dutoit</entry>
+		</row>
+		<row>
+			<entry>Week 6</entry>
+			<entry>Software construction </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapters 17, 18</entry>
+		</row>
+		<row>
+			<entry>Week 7</entry>
+			<entry>Software Testing </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapter 23</entry>
+		</row>
+		<row>
+			<entry>Week 8</entry>
+			<entry>Discussion on assignment #2</entry>
+			<entry/>
+		</row>
+		<row>
+			<entry>Week 9</entry>
+			<entry>Software Maintenance </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapter 21</entry>
+		</row>
+		<row>
+			<entry>Week 10</entry>
+			<entry>Software configuration management </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapter 29</entry>
+		</row>
+		<row>
+			<entry>Week 11</entry>
+			<entry>Discussion on assignment #3</entry>
+			<entry/>
+		</row>
+		<row>
+			<entry>Week 12</entry>
+			<entry>Software quality management </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapters 27, 28</entry>
+		</row>
+		<row>
+			<entry>Week 13</entry>
+			<entry>Software engineering management </entry>
+			<entry>Software Engineering; Ian Sommerville; Eighth Edition; Chapters 14, 15, 16. Software Engineering Theory and PracticePfleeger; Shari Lawrence</entry>
+		</row>
+		<row>
+			<entry>Week 14</entry>
+			<entry>Assignment #4</entry>
+			<entry/>
+		</row>
+		<row>
+			<entry>Week 15</entry>
+			<entry>Summary of principles of instruction, learning and project</entry>
+			<entry>Course evaluation</entry>
+		</row>
+	</tbody>
+
+</tgroup>
+</table>
+    </section>
+    <section id="id-737124522597">
+      <title>Suggestions for Success</title>
+      <list id="id36911225" list-type="bulleted">
+        <item>Make sure you know what you want to get out of the course before you get very far into it; there are lots of directions to go in, and having a focus will help to inspire you </item>
+        <item>Update your journal often; use it as a tool to develop / explore ideas and track your progress </item>
+        <item>Remember that the larger software development project is something to be considered throughout the semester; don't wait until the end! </item>
+        <item>Raise concerns early; if an assignment or milestone doesn't seem feasible, say so as soon as you can </item>
+        <item>"Work hard, learn lots, stay excited, and have fun." --Ray Ontko</item>
+      </list>
+    </section>
+  </content>
+</document>

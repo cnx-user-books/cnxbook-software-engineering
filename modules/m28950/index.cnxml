@@ -1,0 +1,43 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Tools</title>
+  <metadata>
+  <md:content-id>m28950</md:content-id><md:title>Tools</md:title>
+  <md:abstract>There are some links to tools on software engineering topics.</md:abstract>
+  <md:uuid>6658d47e-77d3-4b76-b120-a08144bb3ee6</md:uuid>
+</metadata>
+
+<content>
+    <para id="id30363605">
+      <link url="http://xmlbasedsrs.tigris.org/">http://xmlbasedsrs.tigris.org/</link>
+    </para>
+    <para id="id28438994">Writing software requirements specifications as XML documents has quite a few advantages. Using open source tools like Emacs, PSGML, CVS and xsltproc gives us a powerful Requirements Engineering tool.</para>
+    <list id="id30884553" list-type="bulleted">
+      <item>Gather information using Emacs </item>
+      <item>Validating specifications using psgml and XSLT </item>
+      <item>Keeping track of changes using CVS and XSLT </item>
+      <item>Creating nice output with xsltproc </item>
+      <item>Transforming requirements data to project management tools</item>
+    </list>
+    <para id="id29641551">
+      <link url="http://en.wikipedia.org/wiki/List_of_UML_tools">http://en.wikipedia.org/wiki/List_of_UML_tools</link>
+    </para>
+    <para id="id28374693">This page lists Unified Modeling Language tools, classified by their proprietary or non-proprietary status.</para>
+    <para id="id29284186">
+      <link url="http://subversion.tigris.org/">http://subversion.tigris.org/</link>
+    </para>
+    <para id="id30574388">Subversion is an open source version control system. Subversion was originally designed to be a better CVS, so it has most of CVS's features. Generally, Subversion's interface to a particular feature is similar to CVS's, except where there's a compelling reason to do otherwise.</para>
+    <para id="id29579921">Subversion has since expanded beyond its original goal of replacing CVS, but its history influenced its feature and interface choices; Subversion today should still feel very familiar to CVS users.</para>
+    <para id="id28891208">
+      <link url="http://www.iterating.com/productclasses/Software-Engineering-Tools">http://www.iterating.com/productclasses/Software-Engineering-Tools</link>
+    </para>
+    <para id="id30005266">Software Engineering Tools are also known as Computer-Aided Software Engineering Tools ( CASE Tools). They are graphical, interactive tools used for the analyzing and designing the phases of application software development. </para>
+    <para id="id29093337">
+      <link url="http://www.opensourcetesting.org/">http://www.opensourcetesting.org/</link>
+    </para>
+    <para id="id29861506">There are some open source software testing tools.</para>
+    <para id="id30662387">
+      <link url="http://en.wikipedia.org/wiki/List_of_project_management_software">http://en.wikipedia.org/wiki/List_of_project_management_software</link>
+    </para>
+    <para id="id29284524">This is a list of notable software project management applications.</para>
+  </content>
+</document>
