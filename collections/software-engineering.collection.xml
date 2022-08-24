@@ -1,3 +1,38 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Course">  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">  <md:content-id>col10790</md:content-id>  <md:title>Software Engineering</md:title>      <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0</md:license>  <md:language>en</md:language>        <md:uuid>cf1e3261-5591-4da3-a8fb-492b79aac45e</md:uuid>
-<md:slug>software-engineering</md:slug>
-</metadata>  <col:content>                        <col:subcollection>        <md:title>Student Manual</md:title>                                <col:content>                    <col:module document="m28909"/>                            <col:module document="m28886"/>                            <col:module document="m28911"/>                            <col:module document="m28926"/>                            <col:module document="m28950"/>                          </col:content>      </col:subcollection>                            <col:subcollection>        <md:title>Lecture notes  </md:title>                                <col:content>                    <col:module document="m28922"/>                            <col:module document="m28927"/>                            <col:module document="m14621"/>                            <col:module document="m28936"/>                            <col:module document="m28929"/>                            <col:module document="m28939"/>                            <col:module document="m14717"/>                            <col:module document="m14730"/>                            <col:module document="m28899"/>                            <col:module document="m28902"/>                          </col:content>      </col:subcollection>      </col:content></col:collection>
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" type="Course" authors="Hung Vo">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col10790</md:content-id>
+    <md:title>Software Engineering</md:title>
+    <md:license url="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License 3.0</md:license>
+    <md:language>en</md:language>
+    <md:uuid>cf1e3261-5591-4da3-a8fb-492b79aac45e</md:uuid>
+    <md:slug>software-engineering</md:slug>
+  </metadata>
+  <col:content>
+    <col:subcollection>
+      <md:title>Student Manual</md:title>
+      <col:content>
+        <col:module document="m28909"/>
+        <col:module document="m28886"/>
+        <col:module document="m28911"/>
+        <col:module document="m28926"/>
+        <col:module document="m28950"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Lecture notes  </md:title>
+      <col:content>
+        <col:module document="m28922"/>
+        <col:module document="m28927"/>
+        <col:module document="m14621"/>
+        <col:module document="m28936"/>
+        <col:module document="m28929"/>
+        <col:module document="m28939"/>
+        <col:module document="m14717"/>
+        <col:module document="m14730"/>
+        <col:module document="m28899"/>
+        <col:module document="m28902"/>
+      </col:content>
+    </col:subcollection>
+  </col:content>
+</col:collection>
